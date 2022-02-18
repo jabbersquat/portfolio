@@ -28,8 +28,4 @@ function animate() {
 }
 
 
-
-
-window.onload = function(e) {
-  window.ad = new animate();
-};
+document.addEventListener('DOMContentLoaded', animate, false);

@@ -1,51 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+@import 'reset';
 
 /* ==========================================================================
    Custom Variables
@@ -61,23 +14,54 @@ table {
   --brown2: #736464;
   --black: #101820;
   --offwhite: #f0f0dc;
+  --background-color: var(--yellow);
+  --text-color: var(--black);
+  --link-color: var(--blue);
+  --font-stack-heading: neue-haas-grotesk-display, sans-serif;
+  --font-stack-text: neue-haas-grotesk-text, sans-serif;
+  --weight-normal: 400;
+  --weight-bold: 700;
+}
+
+html[data-theme='light'] {
+  --background-color: var(--yellow);
+  --text-color: var(--black);
+  --link-color: var(--blue);
+}
+
+html[data-theme='dark'] {
+  --background-color: var(--black);
+  --text-color: var(--yellow);
+  --link-color: var(--blue);
 }
 
 /* ==========================================================================
    General Styles
    ========================================================================== */
 
+html {
+  font-size: 100%; /*16px*/
+
+  @media screen and (max-width: 675px) {
+    font-size: 87.5%; /*16px*/
+  }
+} 
+
+body {
+  background-color: var(--background-color);
+}
+
 body,
 p {
-  font-family: proxima-nova, sans-serif;
-  font-weight: 300;
+  font-family: var(--font-stack-text);
+  font-weight: var(--weight-normal);
   font-style: normal;
-  color: var(--black);
-  line-height: 1.75;
+  color: var(--text-color);
+  line-height: 1.55;
 }
 
 a {
-  color: var(--blue);
+  color: var(--link-color);
 
   &:hover {
     color: var(--green);
@@ -112,139 +96,184 @@ body {
   padding-bottom: var(--block);
 }
 
-.section-wrapper,
-.section-video,
-.section-contact {
+.section {
   border-top: 1px solid #101820;
   padding-top: var(--block);
+  
+  &.site-header {
+    padding-top: calc(var(--block) * 1.25);
+  }
 }
 
-.wholeside-wrapper {
-  grid-column: 1 / span 2;
+//Brian Learns CSS GRID!
+.intro,
+.section-intro {
+  @media screen and (min-width: 675px) {
+    width: calc(var(--block) * 7);
+  }
+
+  @media screen and (min-width: 900px) {
+    width: calc(var(--block) * 10);
+  }
 }
 
 .gridder {
-  display: grid;
-  grid-template-columns: calc(var(--block) * 10) 1fr;
-  gap: calc(var(--block) * 2);
+  @media screen and (min-width: 675px) {
+    display: grid;
+    grid-template-columns: calc(var(--block) * 7) 1fr;
+    gap: var(--block);
+  }
+
+  @media screen and (min-width: 900px) {
+    grid-template-columns: calc(var(--block) * 10) 1fr;
+    gap: var(--block) calc(var(--block) * 2);
+  }
+  
+  @media screen and (min-width: 1300px) {
+    grid-template-columns: calc(var(--block) * 12) 1fr;
+  }
+}
+
+
+@media screen and (min-width: 1300px) {
+  .work-imgs,
+  .skill-sets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--block) / 2);
+  }
+}
+
+.section-video,
+.video-wrapper,
+.section-skills-header-wrapper,
+.skill-sets {
+  @media screen and (max-width: 1299px) {
+    grid-column: span 2;
+  }
 }
 
 .site-header,
 .site-main {
-  padding-left: var(--block);
-  padding-right: calc(var(--block) * 2);
+  padding-left: calc(var(--block) / 2);
+  padding-right: calc(var(--block) / 2);
+
+  @media screen and (min-width: 675px) {
+    padding-left: var(--block);
+    padding-right: calc(var(--block) * 2);
+  }
+
+  @media screen and (min-width: 1300px) {
+    padding-right: calc(var(--block) * 4);
+  }
 }
 
 /* ==========================================================================
    Typography
    ========================================================================== */
 
-p {margin-bottom: 1rem;}
+p {
+  margin-bottom: 1rem;
+  // letter-spacing: 0.25px;
+}
 
 strong {
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: var(--font-stack-heading);
+  font-weight: var(--weight-bold);
 }
 
-small, 
-.text_small {
-  font-size: 0.8rem;
-}
-
-// Headers
-h2, h3, h4, h5 {
-  font-family: lores-9-plus-wide, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  line-height: var(--block);
+// Headers  -- https://type-scale.com/
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: var(--font-stack-heading);
+  font-weight: var(--weight-bold);
+  line-height: 1.05;
 }
 
 h1 {
-  font-family: proxima-nova, sans-serif;
-  font-weight: 400;
-  color: var(--black);
-  text-transform: uppercase;
-  text-shadow: 2px 2px var(--yellow);
-  display: inline-block;
-  margin-top: var(--block);
-  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 0.8;
+  font-size: 5.653rem; // Augmented Fourth
 
-  // &:hover {
-  //   background-color: var(--blue);
-  //   background-image: linear-gradient(45deg, var(--red) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--green) 50%, var(--green) 75%, var(--blue) 75%);
-  //   background-size: 100%;
-  //   -webkit-background-clip: text;
-  //   -moz-background-clip: text;
-  //   -webkit-text-fill-color: transparent; 
-  //   -moz-text-fill-color: transparent;
-  //   text-shadow: none;
-  // }
-}
-
-.last-name {
-  font-family: lores-9-plus-wide, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-shadow: 2px 2px var(--yellow);
-  margin-bottom: var(--block);
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-
-// Shadow Animation
-.shadow-animation {
-  font-size: 1.6rem;
-  line-height: 1.2;
-  margin-bottom: calc(var(--block) / 4);
-  text-transform: uppercase;
-
-  span {
-    display: block;
-    font-size: 1.9rem;
-    animation: shadowing 3s infinite;
+  @media screen and (max-width: 675px) {
+    font-size: 4.209rem; // Perfect Fourth
   }
 }
 
-@keyframes shadowing {
-  0% { text-shadow: 1px 1px #ffffff, 3px 3px var(--green); }
-  49% { text-shadow: 1px 1px #ffffff, 3px 3px var(--green); }
-  50% { text-shadow: 1px 1px #ffffff, 3px 3px var(--blue); }
-  99% { text-shadow: 1px 1px #ffffff, 3px 3px var(--blue); }
-  100% { text-shadow: 1px 1px #ffffff, 3px 3px var(--green); }
+h2 {
+  font-size: 3.998rem;
+
+  @media screen and (max-width: 675px) {
+    font-size: 3.157rem;
+  }
 }
 
-h4 {font-size: 1.563rem;}
+h3 {
+  font-size: 2.827rem;
 
-h5 {font-size: 1.25rem;}
+  @media screen and (max-width: 675px) {
+    font-size: 1.777rem;
+  }
+}
+
+h4 {
+  font-size: 1.999rem;
+
+  @media screen and (max-width: 675px) {
+    font-size: 1.333rem;
+  }
+
+  &.skill-set-hdr {
+    @media screen and (max-width: 899px) {
+      font-size: 1.677rem;
+    }
+  }
+}
+
+h5 {font-size: 1.414rem;}
+
+small, .text_small {
+  font-size: 0.707rem;
+
+  @media screen and (max-width: 675px) {
+    font-size: 0.75rem;
+  }
+}
+
+.hello {
+  font-size: 1rem;
+  display: block;
+  margin-left: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+// .name {
+//   @media screen and (max-width: 675px) {
+//     display: block;
+//   }
+// }
+
+.section-hdr {
+  margin-bottom: 1rem;
+}
 
 /* ==========================================================================
    Header
    ========================================================================== */
 
 .site-header {
-  height: calc(var(--block) * 8)
-}
-
-.title-wrapper {
-  overflow: hidden;
-}
-
-.intro {
-  width: calc(var(--block) * 9);
+  padding-bottom: calc(var(--block) * 4)
 }
 
 /* ==========================================================================
    Skill Section
    ========================================================================== */
-
+.saying {
+  @media screen and (max-width: 1300px) {
+    display: block;
+  }
+}
 .skill-list li {
   display: flex;
   align-items: center;
@@ -263,6 +292,10 @@ h5 {font-size: 1.25rem;}
   margin-left: 10px;
   line-height: 1rem;
 }
+.skill-example {
+  font-size: 0.707rem;
+  display: block;
+}
 
 .set {
   margin-bottom: var(--block);
@@ -271,12 +304,12 @@ h5 {font-size: 1.25rem;}
     margin-bottom: 0;
   }
 }
-
-@media screen and (min-width: 1300px) {
-  .skill-sets {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: calc(var(--block) / 2);
+.skill-set-hdr {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  
+  @media screen and (min-width: 675px) {
+    line-height: var(--block);
   }
 }
 
@@ -284,8 +317,8 @@ h5 {font-size: 1.25rem;}
    Work Section
    ========================================================================== */
 
-.header-work {
-  margin-bottom: calc(var(--block) / 4);
+.work-hdr {
+  margin-bottom: calc(var(--block) / 2);
 }
 
 .header-links, 
@@ -300,13 +333,6 @@ h5 {font-size: 1.25rem;}
 
 article {
   margin-bottom: 5rem;
-}
-@media screen and (min-width: 1300px) {
-  .work-imgs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: calc(var(--block) / 2);
-  }
 }
 
 .work-img {
@@ -345,7 +371,11 @@ article {
 /* ==========================================================================
    Video Section
    ========================================================================== */
-
+.video-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
 .img-fluid, video {
   width: 100%;
   height: auto;
@@ -355,6 +385,15 @@ article {
 /* ==========================================================================
    Footer
    ========================================================================== */
+
+.contact-info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.contact-items {
+  margin-bottom: 0.25rem;
+}
 
 .footer {
   background-color: var(--black);
@@ -366,47 +405,58 @@ article {
 }
 
 /* ==========================================================================
-   Head Styles.
+   Sidebar
    ========================================================================== */
 
-// .profile-wrapper img {
-//   border-radius: 50%;
-// }
+.site-sidebar {
+  position: absolute;
+  top: var(--block);
+  right: var(--block);
+  width: calc(var(--block) * 1);
+}
 
-.eightbithead-wrapper {
+.bt-logo-wrapper {
+  width: calc(var(--block) * 1);
+  height: 0;
+  position: relative;
+  padding-top: 0.75%;
+}
+
+.bt-logo {
+  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
-  overflow: hidden;
 }
-.eightbithead {
-  width: 2800px;
-  display: grid;
-  grid-template-columns: repeat(70, 1fr);
-  opacity: 1;
-  // border-radius: 50%;
-  overflow: hidden;
-  margin-top: calc(var(--block) * -10);
-  margin-left: calc(var(--block) * -3);
-}
-.eightbithead div {
-  background-color: transparent;
-  height: var(--block);
-  opacity: 0.3;
-}
-/* .eightbithead div:hover {
-  opacity: 0.5;
-} */
 
 /* ==========================================================================
-   Starter Animation styles.
+   Head Styles.
    ========================================================================== */
 
-.intro
-.section {
-  opacity: 0;
+@import 'head-animation';
+
+
+/* ==========================================================================
+  Colophon.
+   ========================================================================== */
+
+.colophon__title {
+  margin-bottom: 1rem;
 }
 
+.colophon__site-main {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.credit-set {
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+  Dark Mode.
+   ========================================================================== */
+
+   @import 'dark-mode';
