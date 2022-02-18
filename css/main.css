@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Custom Styles.
+   ========================================================================== */
+
+body,
+p {
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  border-top: 3rem solid #01ABAA;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: ltc-bodoni-175, serif; 
+}
+
+header {
+  padding: 8rem 0;
+}
+
+h1 {
+  color: #01ABAA;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-skills {
+  background-color: #FEDC3D;
+}
+
+.img-work {
+  border: 1px solid #FEA680;
+}
+
+article {
+  margin-bottom: 5rem;
+}
+
+.profile-wrapper img {
+  border-radius: 50%;
+}
+
+.section-video {
+  background-color: #FEA680;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #01ABAA;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+.header-links, .header-links:visited {
+  text-decoration: none;
+  color: #01ABAA;
+}
+.header-links:hover {
+  text-decoration: underline;
+  color: #FEA680;
+}
