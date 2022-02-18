@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -11,50 +12,45 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
-
 body {
-  line-height: 1;
+	line-height: 1;
 }
-
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
-
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
-  content: none;
+	content: '';
+	content: none;
 }
-
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* ==========================================================================
    Custom Variables
    ========================================================================== */
+
 :root {
   --block: 40px;
   --red: #d24040;
@@ -70,6 +66,7 @@ table {
 /* ==========================================================================
    General Styles
    ========================================================================== */
+
 body,
 p {
   font-family: proxima-nova, sans-serif;
@@ -81,9 +78,10 @@ p {
 
 a {
   color: var(--blue);
-}
-a:hover {
-  color: var(--green);
+
+  &:hover {
+    color: var(--green);
+  }
 }
 
 body {
@@ -108,6 +106,8 @@ body {
   border-width: 0;
 }
 
+//Sections general
+
 .section {
   padding-bottom: var(--block);
 }
@@ -120,7 +120,7 @@ body {
 }
 
 .wholeside-wrapper {
-  grid-column: 1/span 2;
+  grid-column: 1 / span 2;
 }
 
 .gridder {
@@ -138,20 +138,20 @@ body {
 /* ==========================================================================
    Typography
    ========================================================================== */
-p {
-  margin-bottom: 1rem;
-}
+
+p {margin-bottom: 1rem;}
 
 strong {
   font-weight: 700;
   text-transform: uppercase;
 }
 
-small,
+small, 
 .text_small {
   font-size: 0.8rem;
 }
 
+// Headers
 h2, h3, h4, h5 {
   font-family: lores-9-plus-wide, sans-serif;
   font-weight: 700;
@@ -168,6 +168,17 @@ h1 {
   display: inline-block;
   margin-top: var(--block);
   font-size: 3rem;
+
+  // &:hover {
+  //   background-color: var(--blue);
+  //   background-image: linear-gradient(45deg, var(--red) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--green) 50%, var(--green) 75%, var(--blue) 75%);
+  //   background-size: 100%;
+  //   -webkit-background-clip: text;
+  //   -moz-background-clip: text;
+  //   -webkit-text-fill-color: transparent; 
+  //   -moz-text-fill-color: transparent;
+  //   text-shadow: none;
+  // }
 }
 
 .last-name {
@@ -187,48 +198,39 @@ h3 {
   font-size: 1.75rem;
 }
 
+
+// Shadow Animation
 .shadow-animation {
   font-size: 1.6rem;
   line-height: 1.2;
   margin-bottom: calc(var(--block) / 4);
   text-transform: uppercase;
-}
-.shadow-animation span {
-  display: block;
-  font-size: 1.9rem;
-  animation: shadowing 3s infinite;
+
+  span {
+    display: block;
+    font-size: 1.9rem;
+    animation: shadowing 3s infinite;
+  }
 }
 
 @keyframes shadowing {
-  0% {
-    text-shadow: 1px 1px #ffffff, 3px 3px var(--green);
-  }
-  49% {
-    text-shadow: 1px 1px #ffffff, 3px 3px var(--green);
-  }
-  50% {
-    text-shadow: 1px 1px #ffffff, 3px 3px var(--blue);
-  }
-  99% {
-    text-shadow: 1px 1px #ffffff, 3px 3px var(--blue);
-  }
-  100% {
-    text-shadow: 1px 1px #ffffff, 3px 3px var(--green);
-  }
-}
-h4 {
-  font-size: 1.563rem;
+  0% { text-shadow: 1px 1px #ffffff, 3px 3px var(--green); }
+  49% { text-shadow: 1px 1px #ffffff, 3px 3px var(--green); }
+  50% { text-shadow: 1px 1px #ffffff, 3px 3px var(--blue); }
+  99% { text-shadow: 1px 1px #ffffff, 3px 3px var(--blue); }
+  100% { text-shadow: 1px 1px #ffffff, 3px 3px var(--green); }
 }
 
-h5 {
-  font-size: 1.25rem;
-}
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
 
 /* ==========================================================================
    Header
    ========================================================================== */
+
 .site-header {
-  height: calc(var(--block) * 8);
+  height: calc(var(--block) * 8)
 }
 
 .title-wrapper {
@@ -242,23 +244,21 @@ h5 {
 /* ==========================================================================
    Skill Section
    ========================================================================== */
+
 .skill-list li {
   display: flex;
   align-items: center;
   height: var(--block);
 }
-
 .skill-icons {
   display: flex;
   align-items: center;
 }
-
 .skill-svg {
   width: calc(var(--block) - 10px);
   height: calc(var(--block) - 10px);
   padding: 5px;
 }
-
 .skill {
   margin-left: 10px;
   line-height: 1rem;
@@ -266,9 +266,10 @@ h5 {
 
 .set {
   margin-bottom: var(--block);
-}
-.set + .set {
-  margin-bottom: 0;
+
+  & + .set {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1300px) {
@@ -278,19 +279,20 @@ h5 {
     gap: calc(var(--block) / 2);
   }
 }
+
 /* ==========================================================================
    Work Section
    ========================================================================== */
+
 .header-work {
   margin-bottom: calc(var(--block) / 4);
 }
 
-.header-links,
+.header-links, 
 .header-links:visited {
   text-decoration: none;
   color: var(--black);
 }
-
 .header-links:hover {
   text-decoration: underline;
   color: var(--blue);
@@ -299,7 +301,6 @@ h5 {
 article {
   margin-bottom: 5rem;
 }
-
 @media screen and (min-width: 1300px) {
   .work-imgs {
     display: grid;
@@ -307,14 +308,16 @@ article {
     gap: calc(var(--block) / 2);
   }
 }
+
 .work-img {
   width: 100%;
   height: auto;
   margin-bottom: var(--block);
   border: 1px solid var(--blue);
-}
-.work-img--link:hover .work-img {
-  border: 1px solid var(--green);
+
+  .work-img--link:hover & {
+    border: 1px solid var(--green);
+  }
 }
 
 .work-displayads {
@@ -327,40 +330,49 @@ article {
   width: 100%;
   height: 0;
   position: relative;
-  padding-top: 83.3333333333%;
-}
-.work-displayad--wrapper iframe {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  padding-top: calc((250 / 300) * 100%);
+
+  iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* ==========================================================================
    Video Section
    ========================================================================== */
+
 .img-fluid, video {
   width: 100%;
   height: auto;
 }
 
+
 /* ==========================================================================
    Footer
    ========================================================================== */
+
 .footer {
   background-color: var(--black);
   padding: 3rem 0;
   text-align: center;
-}
-.footer p {
+  p {
   color: var(--offwhite);
+  }
 }
 
 /* ==========================================================================
    Head Styles.
    ========================================================================== */
+
+// .profile-wrapper img {
+//   border-radius: 50%;
+// }
+
 .eightbithead-wrapper {
   position: absolute;
   width: 100%;
@@ -370,31 +382,31 @@ article {
   z-index: -1;
   overflow: hidden;
 }
-
 .eightbithead {
   width: 2800px;
   display: grid;
   grid-template-columns: repeat(70, 1fr);
   opacity: 1;
+  // border-radius: 50%;
   overflow: hidden;
   margin-top: calc(var(--block) * -10);
   margin-left: calc(var(--block) * -3);
 }
-
 .eightbithead div {
   background-color: transparent;
   height: var(--block);
   opacity: 0.3;
 }
-
 /* .eightbithead div:hover {
   opacity: 0.5;
 } */
+
 /* ==========================================================================
    Starter Animation styles.
    ========================================================================== */
-.intro .section {
+
+.intro
+.section {
   opacity: 0;
 }
 
-/*# sourceMappingURL=main.css.map */

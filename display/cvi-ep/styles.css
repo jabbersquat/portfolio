@@ -1,0 +1,74 @@
+/*  standard  */
+html,body,div,a {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-family:sans-serif;
+	background:#fff;
+	overflow:hidden;
+	line-height:1;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+div, img, .svg-whole {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+}
+#container {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	/* background-color: #005084; */
+}
+#border {
+	border: 1px solid #000;
+	z-index: 100;
+}
+
+/*  Svg coloring  */
+.proof {
+  fill: #8FD8F8;
+}
+
+/*  EKG  */
+#svg-ekg {
+  width: 100%;
+  height: 60%;
+  top: 32.4%;
+  left: 0;
+}
+#ekg-dash-lead {
+  stroke-dasharray: 1 900;
+  stroke-dashoffset: 700;
+}
+#ekg-dash-full {
+  stroke-dasharray: 900 900;
+  stroke-dashoffset: 1600;
+}
+#ekg-dash-red {
+  stroke-dashoffset: 1775;
+  stroke-dasharray: 900 900;
+  opacity: 0;
+}
+
+
+/*  What starts out hidden  */ 
+#txt1a, #txt1b-abn, #txt1b-ormal, #txt1b-hea, #txt1b-rt, #txt1b-rhy, #txt1b-thms, #txt1c, #line, #txt3a, #proof1, #proof2, #proof3, #image-overlay {
+  opacity: 0;
+}

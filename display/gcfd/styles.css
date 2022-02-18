@@ -1,0 +1,106 @@
+/*  standard  */
+html,body,div,a {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+body,
+html {
+	width:100%;
+	height: 100%;
+}
+body {
+	font-family:sans-serif;
+	background:#fff;
+	overflow:hidden;
+	line-height:1;
+	width:100%;
+}
+div, img, svg {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+}
+#container {
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height: 100%;
+	background-color: #f3f2d9;
+}
+#green-bg {
+  background-color: #124c1b;
+}
+#border {
+	border: 1px solid #000;
+}
+
+#link {
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 101;
+}
+#link #cta {
+  transform-origin: 150px 190px;
+}
+#link:hover #cta {
+  transform: scale(0.98) translate(0px,-1px);
+}
+
+/*  GCFD logo with animation  */
+#gcfd-logo {
+  width: 88%;
+  height: 66%;
+  top: -1.333%;
+  left: -2%;
+}
+.gcfd-lime{fill:#059713;}
+.gcfd-sprout{fill:#91BD45;}
+.gcfd-celery{fill:#E0DEA1;}
+
+#greater,
+#chicago,
+#food-wrapper,
+#depository-wrapper,
+#icon {
+  opacity: 0;
+}
+
+
+
+/*  Person  */
+#img-wrapper{
+  width: 203.3333%;
+  height: 244%;
+  left: -27%;
+  top: -34.4%;
+}
+      
+      
+/*  text  */
+.sprite {
+  background-image: url("img/sprite.svg");
+  background-size: 1500px 1500px;
+}
+
+#txt1 { background-position: 0 0; }
+#txt2 { background-position: -300px 0; }
+#txt3 { background-position: -600px 0; }
+#tag { background-position: 0 -250px; }
+
+#cta { background-position: -300px -250px; }
+/* #logo { background-position: -600px -250px; } */
+
+
+/*  What starts out hidden  */ 
+#txt1, #txt2, #txt3, #tag, #cta, #green-bg {
+  opacity: 0;
+}
