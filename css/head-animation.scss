@@ -14,8 +14,7 @@
   right: 0;
   z-index: -1;
   overflow: hidden;
-  background-color: #C19888;
-  opacity: 0.25;
+  // background-color: #C19888;
 
   @media screen and (min-width: 675px) {
     width: calc(var(--block) * 10);
@@ -35,14 +34,15 @@
   background-color: transparent;
   
   div {
-    background-color: transparent;
+    background-color: #ffffff;
     height: calc(var(--block) / 2);
+    opacity: 0.25;
   }
 
   @media screen and (min-width: 675px) {
     width: 2800px;
     grid-template-columns: repeat(70, 1fr);
-    margin-top: calc(var(--block) * -12);
+    margin-top: calc(var(--block) * -19);
     margin-left: calc(var(--block) * -18);
 
     div {

@@ -147,7 +147,6 @@ body {
 }
 
 .section {
-  border-top: 1px solid #101820;
   padding-top: var(--block);
 }
 .section.site-header {
@@ -501,8 +500,6 @@ article {
   right: 0;
   z-index: -1;
   overflow: hidden;
-  background-color: #C19888;
-  opacity: 0.25;
 }
 @media screen and (min-width: 675px) {
   .eightbithead-wrapper {
@@ -523,14 +520,15 @@ article {
   background-color: transparent;
 }
 .eightbithead div {
-  background-color: transparent;
+  background-color: #ffffff;
   height: calc(var(--block) / 2);
+  opacity: 0.25;
 }
 @media screen and (min-width: 675px) {
   .eightbithead {
     width: 2800px;
     grid-template-columns: repeat(70, 1fr);
-    margin-top: calc(var(--block) * -12);
+    margin-top: calc(var(--block) * -19);
     margin-left: calc(var(--block) * -18);
   }
   .eightbithead div {
