@@ -38,7 +38,7 @@ function animate_cefcu() {
 
   var tl_cefcu = gsap.timeline({defaults: {duration: 0.75, ease: 'power1.inOut'}});
     tl_cefcu
-    .to('.eightyeightad.cefcu-wrapper', {borderColor: "#d24040"},'reset')
+    .to('.eightyeightad.cefcu-wrapper', {borderColor: "#00a0c8"},'reset')
     .set(headline, {rotation:0.01, transformOrigin: '0px 0px'},'reset')
     .set([cherryWhole,iceCreamDrawing,iceCream], {opacity: 0},'reset')
     .to([legal,logo_cefcu,ctaWrap_cefcu], {duration: 0.75, opacity: 0},'reset')
@@ -56,37 +56,37 @@ function animate_cefcu() {
     .to(iceCream, {duration: 0.5, x: 0, ease: "back.out(1.4)"},'start+=0.5')
     .to(txt1_cefcu, {opacity: 1},'start+=0.5')
 
-    .to(txt1_cefcu, {opacity: 0},'txt1+=1.5')
-    .to(headline, {duration: 0.5, y: -1},'txt1+=1.65')
+    .to(txt1_cefcu, {opacity: 0},'txt1+=1')
+    .to(headline, {duration: 0.5, y: -1},'txt1+=1.15')
 
     .to(p1, {opacity: 1},'proofs+=0')
-    .to(p2, {opacity: 1},'proofs+=2.5')
-    .to(p3, {opacity: 1},'proofs+=5')
+    .to(p2, {opacity: 1},'proofs+=1.25')
+    .to(p3, {opacity: 1},'proofs+=2.5')
 
     .to(iceCreamDrawing, {duration:0.1, opacity: 1},'proofs+=0.25')
     .to(ic, {duration: 1.5, drawSVG: "100%", ease: 'power1.out'},'proofs+=0.25')
-    .to(icInner, {duration: 1.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=2.75')
-    .to([spr3,spr6,spr9,spr12], {duration: 0.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=3.1')
-    .to([spr2,spr5,spr8,spr11,spr14], {duration: 0.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=3.4')
-    .to([spr1,spr4,spr7,spr10,spr13], {duration: 0.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=3.7')
-    .to(cherryWrap, {duration:0.2, opacity: 1},'proofs+=5.75')
-    .to(cherryWhole, {duration:0.4, opacity: 1, y: 0, ease: "back.out(2)"},'proofs+=5.75')
-    .to(cherry, {duration:0.2, scaleY:0.85, ease: "power1.out"},'proofs+=5.75')
-    .to(cherry, {duration:0.2, scaleY:1, ease: "power1.in"},'proofs+=6')
-    .to(cherryStem, {duration:0.2, y:10, ease: "power1.out"},'proofs+=5.75')
-    .to(cherryStem, {duration:0.2, y:0, ease: "power1.in"},'proofs+=6')
+    .to(icInner, {duration: 1.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=1.35')
+    .to([spr3,spr6,spr9,spr12], {duration: 0.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=1.55')
+    .to([spr2,spr5,spr8,spr11,spr14], {duration: 0.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=1.7')
+    .to([spr1,spr4,spr7,spr10,spr13], {duration: 0.25, drawSVG: "100%", ease: 'power1.out'},'proofs+=1.85')
+    .to(cherryWrap, {duration:0.2, opacity: 1},'proofs+=2.85')
+    .to(cherryWhole, {duration:0.4, opacity: 1, y: 0, ease: "back.out(2)"},'proofs+=2.85')
+    .to(cherry, {duration:0.2, scaleY:0.85, ease: "power1.out"},'proofs+=2.85')
+    .to(cherry, {duration:0.2, scaleY:1, ease: "power1.in"},'proofs+=3')
+    .to(cherryStem, {duration:0.2, y:10, ease: "power1.out"},'proofs+=2.85')
+    .to(cherryStem, {duration:0.2, y:0, ease: "power1.in"},'proofs+=3')
 
-    .to(headline, {duration: 0.5, y: 0, x: 0, scale: 1},'final+=2.3')
-    .to(iceCream, {duration: 0.5, x: 158, scale: 1, ease: "back.in(1.4)"},'final+=2')
-    .to(overlay, {duration: 0.5, x: 0, scale: 1, ease: "back.in(1.4)"},'final+=2.1')
-    .to(p1, {opacity: 0},'final+=2')
-    .to(p2, {opacity: 0},'final+=2.15')
-    .to(p3, {opacity: 0},'final+=2.3')
-    .to(legal, {opacity: 1},'final+=3.25')
-    .to(logo_cefcu, {opacity: 1},'final+=3.25')
-    .to(ctaWrap_cefcu, {duration: 0.25, opacity: 1},'final+=4.25')
-    .to(cta_cefcu, {duration: 0.5, scale: 1, ease: "back.out(1)"},'final+=4.25')
-    .to('.eightyeightad.cefcu-wrapper', {borderColor: "#00a0c8"},'final+=4.25');
+    .to(headline, {duration: 0.5, y: 0, x: 0, scale: 1},'final+=1.15')
+    .to(iceCream, {duration: 0.5, x: 158, scale: 1, ease: "back.in(1.4)"},'final+=1')
+    .to(overlay, {duration: 0.5, x: 0, scale: 1, ease: "back.in(1.4)"},'final+=1.05')
+    .to(p1, {opacity: 0},'final+=1')
+    .to(p2, {opacity: 0},'final+=1.075')
+    .to(p3, {opacity: 0},'final+=1.15')
+    .to(legal, {opacity: 1},'final+=1.62')
+    .to(logo_cefcu, {opacity: 1},'final+=1.62')
+    .to(ctaWrap_cefcu, {duration: 0.25, opacity: 1},'final+=2.12')
+    .to(cta_cefcu, {duration: 0.5, scale: 1, ease: "back.out(1)"},'final+=2.12')
+    .to('.eightyeightad.cefcu-wrapper', {borderColor: "#00a0c8"},'final+=2.12');
     
     return tl_cefcu;
   }
@@ -136,7 +136,7 @@ function animate_cefcu() {
     gsap.set(skeleton, {rotation:0.01, scale: 1, z: 0.1, transformOrigin:'50% 97.8%'});	
     
     for (i = 0; i < bones.length; i++) { 
-      var timeDelay = (i / 5) + (0.1 * i);
+      var timeDelay = (i / 5) + (0.05 * i);
       
       if ( bones[i][0] === "head" ||  bones[i][0] === "hips" ||  bones[i][0] === "spine") {
         
@@ -145,8 +145,8 @@ function animate_cefcu() {
         
         gsap.set(bone, {rotation: bones[i][1], transformOrigin:'50% 50%'});
         
-        gsap.to(boneGroup, 1,{y: 250, ease:Power3.easeOut, delay:timeDelay});
-        gsap.to(bone, 0.85, {rotation: 0, ease:Power3.easeOut, delay:timeDelay + 0.15});
+        gsap.to(boneGroup, 0.5,{y: 250, ease:Power3.easeOut, delay:timeDelay});
+        gsap.to(bone, 0.425, {rotation: 0, ease:Power3.easeOut, delay:timeDelay + 0.15});
         
       } else {
         
@@ -158,11 +158,11 @@ function animate_cefcu() {
         gsap.set(boneRight, {rotation: bones[i][1], transformOrigin:'50% 50%'});
         gsap.set(boneLeft, {rotation: bones[i][2], transformOrigin:'50% 50%'});
         
-        gsap.to(boneRightGroup, 1, {y: 250, ease:Power3.easeOut, delay:timeDelay});
-        gsap.to(boneLeftGroup, 1, {y: 250, ease:Power3.easeOut, delay:timeDelay});
+        gsap.to(boneRightGroup, 0.5, {y: 250, ease:Power3.easeOut, delay:timeDelay});
+        gsap.to(boneLeftGroup, 0.5, {y: 250, ease:Power3.easeOut, delay:timeDelay});
         
-        gsap.to(boneRight, 0.85, {rotation: 0, ease:Power3.easeOut, delay:timeDelay + 0.15});
-        gsap.to(boneLeft, 0.85, {rotation: 0, ease:Power3.easeOut, delay:timeDelay + 0.15});
+        gsap.to(boneRight, 0.425, {rotation: 0, ease:Power3.easeOut, delay:timeDelay + 0.15});
+        gsap.to(boneLeft, 0.425, {rotation: 0, ease:Power3.easeOut, delay:timeDelay + 0.15});
       }
       
     }
@@ -170,14 +170,14 @@ function animate_cefcu() {
   };
   
   var animationNames = function() {
-    gsap.to(name_shoulder, 0.5,{opacity: 1, ease:Power0.easeNone, delay:0});
-    gsap.to(name_elbow, 0.5,{opacity: 1, ease:Power0.easeNone, delay:0.6});
-    gsap.to(name_spine, 0.5,{opacity: 1, ease:Power0.easeNone, delay:1.2});
-    gsap.to(name_wrist, 0.5,{opacity: 1, ease:Power0.easeNone, delay:1.8});
-    gsap.to(name_hand, 0.5,{opacity: 1, ease:Power0.easeNone, delay:2.4});
-    gsap.to(name_hip, 0.5,{opacity: 1, ease:Power0.easeNone, delay:3});
-    gsap.to(name_knee, 0.5,{opacity: 1, ease:Power0.easeNone, delay:3.6});
-    gsap.to(name_ankle, 0.5,{opacity: 1, ease:Power0.easeNone, delay:4});
+    gsap.to(name_shoulder, 0.25,{opacity: 1, ease:Power0.easeNone, delay:0});
+    gsap.to(name_elbow, 0.25,{opacity: 1, ease:Power0.easeNone, delay:0.3});
+    gsap.to(name_spine, 0.25,{opacity: 1, ease:Power0.easeNone, delay:0.6});
+    gsap.to(name_wrist, 0.25,{opacity: 1, ease:Power0.easeNone, delay:0.9});
+    gsap.to(name_hand, 0.25,{opacity: 1, ease:Power0.easeNone, delay:1.2});
+    gsap.to(name_hip, 0.25,{opacity: 1, ease:Power0.easeNone, delay:1.5});
+    gsap.to(name_knee, 0.25,{opacity: 1, ease:Power0.easeNone, delay:1.8});
+    gsap.to(name_ankle, 0.25,{opacity: 1, ease:Power0.easeNone, delay:2});
   }
     
   
@@ -185,7 +185,7 @@ function animate_cefcu() {
 
     var tl_ortho = gsap.timeline({defaults: {duration: 0.5, ease: 'power1.inOut'}});
     tl_ortho
-      .to('.eightyeightad.ortho-wrapper', {borderColor: "#d24040"},'reset')
+      .to('.eightyeightad.ortho-wrapper', {borderColor: "#00a0c8"},'reset')
       .set([name_shoulder,name_elbow,name_spine,name_wrist,name_hand,name_hip,name_knee,name_ankle], {opacity: 0},'reset');
     
     for (i = 0; i < bones.length; i++) { 
@@ -208,14 +208,14 @@ function animate_cefcu() {
       
       .to(skeleton, {opacity: 1},'start')
       .to(ortho_txt1a, {opacity: 1},'start')
-      .to(ortho_txt1b, {opacity: 1},'start+=1')
+      .to(ortho_txt1b, {opacity: 1},'start+=0.5')
       
-      .to([ortho_txt1a,ortho_txt1b], {opacity: 0},'frame2+=3.5')
-      .to(ortho_txt2a, {opacity: 1},'frame2+=3.5')
-      .call(animationNames, null,'frame2+=5')
+      .to([ortho_txt1a,ortho_txt1b], {opacity: 0},'frame2+=2')
+      .to(ortho_txt2a, {opacity: 1},'frame2+=2')
+      .call(animationNames, null,'frame2+=3')
       
-      .to(ortho_txt2a, {opacity: 0},'frame3+=5.5')
-      .to(skeleton, {opacity: 0},'frame3+=5.5')
+      .to(ortho_txt2a, {opacity: 0},'frame3+=2.5')
+      .to(skeleton, {opacity: 0},'frame3+=2.5')
       .to(ortho_txt3d, {opacity: 1},"txt3+=0")
       .to(ortho_txt3a, {opacity: 1},"txt3+=0.35")
       .to(ortho_txt3b, {opacity: 1},"txt3+=0.70")
@@ -303,7 +303,7 @@ function animate_gcfd() {
 
   var tl_gcfd = gsap.timeline({defaults: {duration: 1, ease: 'power1.inOut'}});
     tl_gcfd
-    .to('.eightyeightad.gcfd-wrapper', {borderColor: "#d24040"},'reset')
+    .to('.eightyeightad.gcfd-wrapper', {borderColor: "#00a0c8"},'reset')
     .set([gcfd_txt1,gcfd_txt2,gcfd_txt3,face], {opacity: 0},'reset')
     .set(uncropped, {opacity: 1},'reset')
     .set(gcfd_img, {scale: 1, left:'-27%',top:'-34.4%', rotation:0.1, z: 0.1, transformOrigin:"0% 0%"},'reset')
@@ -315,9 +315,9 @@ function animate_gcfd() {
     .to(gcfd_txt2, { opacity:1},'start+=1.5')
     .to(gcfd_txt3, { opacity:1},'start+=3')
 
-    .to(gcfd_img, { duration: 6, scale:0.35,left:'25%',top:'12%', ease: "power2.out"},'start+=1')
-    .to(uncropped, { duration: 4, opacity:0},'start+=4')
-    .to(face, { duration: 4, opacity:1},'start+=5')
+    .to(gcfd_img, { duration: 3, scale:0.35,left:'25%',top:'12%', ease: "power2.out"},'start+=1')
+    .to(uncropped, { duration: 2, opacity:0},'start+=2')
+    .to(face, { duration: 2, opacity:1},'start+=2.25')
 
     .to(greenBg, { opacity:1},'final')
     .call(animateLogo, null,'final')
@@ -362,17 +362,17 @@ function animate_kenburns_ns() {
 }	
 
 function animate_ns() {
-  tl_ns = gsap.timeline({defaults: {duration: 1, ease: 'power1.inOut'}});
+  tl_ns = gsap.timeline({defaults: {duration: 0.75, ease: 'power1.inOut'}});
     tl_ns
-    .to('.eightyeightad.ns-wrapper', {borderColor: "#d24040"},'reset')
+    .to('.eightyeightad.ns-wrapper', {borderColor: "#00a0c8"},'reset')
     .set([ns_imageMain, ns_imageMultiplied, ns_imageMultipliedClipping], {scale:1},'reset')
     .to([ns_txt3a,ekgLineRed],{opacity: 0, duration: 0.75},'reset')
     .to(ns_frame1Wrap,{opacity: 1, duration: 0.75},'reset')
     .to(ns_line,{attr: {x2: 28}, duration: 0.01},'reset')
     .to(ns_imageMultipliedClipping,{duration:0.75, attr: {y: 300}, ease: "power1.inOut"},'reset')
-    .set(ekgLineLead, {strokeDashoffset: 700},'reset+=1')
-    .set(ekgLineFull, {strokeDashoffset: 1600},'reset+=1')
-    .set(ns_proof1,{fill: "#8FD8F8"},'reset+=1')
+    .set(ekgLineLead, {strokeDashoffset: 700},'reset+=0.75')
+    .set(ekgLineFull, {strokeDashoffset: 1600},'reset+=0.75')
+    .set(ns_proof1,{fill: "#8FD8F8"},'reset+=0.75')
 
     .set([ns_txt1b_ABN,ns_txt1b_ORMAL,ns_txt1b_HEA,ns_txt1b_RT,ns_txt1b_RHY,ns_txt1b_THMS], {scale:0.75 })
     .set(ns_txt1b_ABN, {transformOrigin:"22% 45%" })
@@ -385,48 +385,42 @@ function animate_ns() {
     .call(animate_kenburns_ns, null, 'start')
     .to(ns_txt1a, {opacity:1 },'start+=0.25')
     .to(ns_txt1b_ABN, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal')
-    .to(ns_txt1b_ORMAL, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=0.2')
+    .to(ns_txt1b_ORMAL, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=0.1')
     
-    .to(ns_txt1b_HEA, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=0.75')
-    .to(ns_txt1b_RT, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=0.95')
+    .to(ns_txt1b_HEA, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=0.5')
+    .to(ns_txt1b_RT, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=0.6')
     
-    .to(ns_txt1b_RHY, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=1.75')
-    .to(ns_txt1b_THMS, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=2.15')
-    .to(ns_txt1c, {opacity:1 },'abbynormal+=2.75')
+    .to(ns_txt1b_RHY, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=1')
+    .to(ns_txt1b_THMS, {duration: 0.35, opacity:1, scale:1, ease: Elastic.easeOut.config(2, 1) },'abbynormal+=1.1')
+    .to(ns_txt1c, {opacity:1 },'abbynormal+=1.3')
 
-    .to(ns_imageMultipliedClipping,{duration:0.75, attr: {y: 0}, ease: "power1.inOut"},'frame2+=2')
-    .to(ns_line,{duration:0.5, opacity: 1, attr: {x2: 68}, delay:0.25, ease: "power1.inOut"})
-    .to([ns_txt1a,ns_txt1b_ABN,ns_txt1b_ORMAL,ns_txt1b_HEA,ns_txt1b_RT,ns_txt1b_RHY,ns_txt1b_THMS,ns_txt1c], {opacity:0 },'frame2+=2')
-    .to(ns_proof1,{opacity:1},'frame2+=2.7')
+    .to(ns_imageMultipliedClipping,{duration:0.75, attr: {y: 0}, ease: "power1.inOut"},'frame2+=1')
+    .to(ns_line,{duration:0.5, opacity: 1, attr: {x2: 68}, delay:0.25, ease: "power1.inOut"},'frame2+=1')
+    .to([ns_txt1a,ns_txt1b_ABN,ns_txt1b_ORMAL,ns_txt1b_HEA,ns_txt1b_RT,ns_txt1b_RHY,ns_txt1b_THMS,ns_txt1c], {opacity:0 },'frame2+=1.25')
+    .to(ns_proof1,{opacity:1},'frame2+=1.25')
 
-    .to(ns_proof1,{fill: "#ffffff"},'proof2+=0.75')
-    .to(ns_proof2,{opacity:1},'proof2+=0.85')
+    .to(ns_proof1,{fill: "#ffffff"},'proof2+=0.25')
+    .to(ns_proof2,{opacity:1},'proof2+=0.35')
 
-    .to(ns_proof2,{fill: "#ffffff"},'proof3+=0.75')
-    .to(ns_proof3,{opacity:1},'proof3+=0.85')
+    .to(ns_proof2,{fill: "#ffffff"},'proof3+=0.25')
+    .to(ns_proof3,{opacity:1},'proof3+=0.35')
 
-    .to(ns_proof3,{fill: "#ffffff"},'proofs+=1.5')
+    .to(ns_proof3,{fill: "#ffffff"},'proofs+=0.25')
 
-    .to([ns_proof1,ns_proof2,ns_proof3,ns_line,ns_frame1Wrap],{opacity:0},'final+=1.5')
-    .to(ekgLineLead, {strokeDashoffset: 875, ease: "power1.inOut"},'final+=1.5')
-    .to(ekgLineFull, {strokeDashoffset: 1775, ease: "power1.inOut"},'final+=1.5')
-    .to(ekgLineRed, {opacity: 1, ease: "power1.inOut"},'final+=1.75')
-    .to(ns_txt3a,{opacity:1},'final+=2.5')
-    .to('.eightyeightad.ns-wrapper', {borderColor: "#00a0c8"},'final+=2.5');
+    .to([ns_proof1,ns_proof2,ns_proof3,ns_line,ns_frame1Wrap],{opacity:0},'final+=0.5')
+    .to(ekgLineLead, {strokeDashoffset: 875, ease: "power1.inOut"},'final+=0.5')
+    .to(ekgLineFull, {strokeDashoffset: 1775, ease: "power1.inOut"},'final+=0.5')
+    .to(ekgLineRed, {opacity: 1, ease: "power1.inOut"},'final+=0.75')
+    .to(ns_txt3a,{opacity:1},'final+=1')
+    .to('.eightyeightad.ns-wrapper', {borderColor: "#00a0c8"},'final+=1.5');
 
     return tl_ns;
 }
 
-  function animate_cycle() {
-    var tl_main = gsap.timeline({repeat: -1});
-    tl_main
-      .add( animate_ns() )
-      .add( animate_gcfd() )
-      .add( animate_cefcu() )
-      .add( animate_ortho() );
-
-    return tl_main;
-  }
+  var tl_main = gsap.timeline({paused: true, repeat: -1});
+  tl_main
+    .add( animate_ns() )
+    .add( animate_gcfd() )
+    .add( animate_cefcu() )
+    .add( animate_ortho() );
   
-
-  document.addEventListener('DOMContentLoaded', animate_cycle, false);
