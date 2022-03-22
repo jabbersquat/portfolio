@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'font';
 
 /* ==========================================================================
    Custom Variables
@@ -19,37 +20,49 @@
   --text-color: var(--black);
   --link-color: var(--blue);
   --section-divider: var(--black);
-  --font-stack-heading: neue-haas-grotesk-display, sans-serif;
-  --font-stack-text: neue-haas-grotesk-text, sans-serif;
+  --icon-fill: var(--black);
+  --font-stack-variable: 'Inter var', sans-serif;
+  --font-stack-nonvariable: 'Inter', sans-serif;
   --weight-normal: 400;
   --weight-bold: 700;
 }
 
-html[data-theme='light'] {
+body {
   --background-color: var(--yellow);
   --text-color: var(--black);
   --link-color: var(--blue);
   --section-divider: var(--black);
+  --icon-fill: var(--black);
+  --blackOnlyOnLight: var(--black);
+  --whiteOnlyOnLight: var(--offwhite);
+  --yellowOnlyOnDark: var(--black);
 }
 
-html[data-theme='dark'] {
+body.dark-theme {
   --background-color: var(--black);
   --text-color: var(--yellow);
-  --link-color: var(--brown);
+  --link-color: var(--offwhite);
   --section-divider: var(--yellow);
+  --icon-fill: var(--yellow);
+  --blackOnlyOnLight: var(--offwhite);
+  --whiteOnlyOnLight: var(--black);
+  --yellowOnlyOnDark: var(--yellow);
 }
 
 /* ==========================================================================
    General Styles
    ========================================================================== */
-
 html {
   font-size: 100%; /*16px*/
+  font-family: var(--font-stack-nonvariable);
 
   @media screen and (max-width: 675px) {
-    font-size: 87.5%; /*16px*/
+    font-size: 87.5%;
   }
-} 
+}
+@supports (font-variation-settings: normal) {
+  html { font-family: var(--font-stack-variable); }
+}
 
 body {
   background-color: var(--background-color);
@@ -57,9 +70,6 @@ body {
 
 body,
 p {
-  font-family: var(--font-stack-text);
-  font-weight: var(--weight-normal);
-  font-style: normal;
   color: var(--text-color);
   line-height: 1.55;
 }
@@ -94,18 +104,17 @@ body {
   border-width: 0;
 }
 
-//Sections general
-
-.section {
-  padding-bottom: var(--block);
+.sr-temp {
+  height: 0;
+  overflow: hidden;
 }
 
+//Sections general
 .section {
-  border-top: 2px solid var(--section-divider);
+  // padding-bottom: var(--block);
   padding-top: var(--block);
   
   &.site-header {
-    padding-top: calc(var(--block) * 1.25);
     border-top: none;
 
     @media screen and (max-width: 674px) {
@@ -115,6 +124,10 @@ body {
 }
 
 //Brian Learns CSS GRID!
+.intro {
+  margin-bottom: calc(var(--block) * 4);
+}
+
 .intro,
 .section-intro {
   @media screen and (min-width: 675px) {
@@ -126,6 +139,7 @@ body {
   }
 }
 
+.section,
 .gridder {
   @media screen and (min-width: 675px) {
     display: grid;
@@ -156,10 +170,15 @@ body {
 .section-video,
 .video-wrapper,
 .section-skills-header-wrapper,
-.skill-sets {
+.skill-sets,
+.video-hdr  {
   @media screen and (max-width: 1299px) {
     grid-column: span 2;
   }
+}
+.section-work__header,
+.section-work__content-wrapper {
+  grid-column: span 2;
 }
 
 .site-header,
@@ -177,26 +196,50 @@ body {
   }
 }
 
+.site-header {
+  padding-top: var(--block);
+}
+
+.section-hr {
+  border: none;
+  height: 2px;
+  width: 100%;
+  background-color: var(--section-divider);
+  margin: 0;
+  grid-column: span 2;
+}
+
+.section-content,
+.section-intro {
+  overflow: hidden;
+}
+
+// .section-hr__header {
+//   margin-bottom: calc(var(--block) * 1.25);
+//   margin-top: calc(var(--block) * 4);
+// }
+
 /* ==========================================================================
    Typography
    ========================================================================== */
 
 p {
   margin-bottom: 1rem;
-  // letter-spacing: 0.25px;
+  letter-spacing: -0.004em;
 }
 
 strong {
-  font-family: var(--font-stack-heading);
   font-weight: var(--weight-bold);
 }
 
 // Headers  -- https://type-scale.com/
 h1, h2, h3, h4, h5 {
   margin: 0;
-  font-family: var(--font-stack-heading);
   font-weight: var(--weight-bold);
   line-height: 1.05;
+  letter-spacing: -0.055em;
+  // text-indent: -0.03em;
+  margin-left: -0.03em;
 }
 
 h1 {
@@ -251,10 +294,12 @@ small, .text_small {
 }
 
 .hello {
-  font-size: 1rem;
+  font-size: 0.2em;
+  letter-spacing: -0.055em;
   display: block;
   margin-left: 0.25rem;
   margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 // .name {
@@ -271,9 +316,6 @@ small, .text_small {
    Header
    ========================================================================== */
 
-.site-header {
-  padding-bottom: calc(var(--block) * 4)
-}
 
 /* ==========================================================================
    Skill Section
@@ -328,34 +370,40 @@ small, .text_small {
 }
 
 /* SVG colors */
-.svg-skill-extra {
+.skill-colored {
   opacity: 0;
 }
 .fill-default,
 .fill-circle {
   fill: inherit;
 }
-.fill-black {
-  fill: var(--text-color);
+.stroke-default {
+  fill: none;
+  stroke-width: 10;
+  stroke: inherit;
 }
-.fill-white {
-  fill: var(--offwhite);
+.skill-base,
+.additional-base {
+  fill: var(--icon-fill);
 }
-.fill-yellow {
-  fill: var(--yellow);
-}
-.fill-red {
-  fill: var(--red);
-}
-.fill-purple {
-  fill: var(--purple);
-}
+.fill-black { fill: var(--black); }
+.fill-blackOnLight { fill: var(--blackOnlyOnLight); }
+.fill-white { fill: var(--offwhite); }
+.fill-whiteOnLight { fill: var(--whiteOnlyOnLight); }
+.fill-yellow { fill: var(--yellow); }
+.fill-yellowOnDark { fill: var(--yellowOnlyOnDark); }
+.fill-red { fill: var(--red); }
+.fill-purple { fill: var(--purple); }
+.fill-brown { fill: var(--brown); }
+.fill-green { fill: var(--green); }
+.fill-blue { fill: var(--blue); }
+.stroke-yellowOnDark { stroke: var(--yellowOnlyOnDark); }
 
 /* ==========================================================================
    Work Section
    ========================================================================== */
 
-.work-hdr {
+.work-item-hdr {
   margin-bottom: calc(var(--block) / 2);
 }
 
@@ -370,7 +418,7 @@ small, .text_small {
 }
 
 article {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 .work-video {
@@ -516,6 +564,7 @@ article {
 .footer {
   background-color: var(--black);
   padding: 3rem 0;
+  margin-top: 3rem;
   text-align: center;
   p {
   color: var(--offwhite);
@@ -562,6 +611,20 @@ article {
   }
 }
 
+.dark-mode-symbol {
+  opacity: 0;
+
+  .dark-theme & { opacity: 1; }
+}
+
+.dark-theme .light-mode-symbol {
+  opacity: 0;
+}
+
+.lightdark-mode:hover use {
+  stroke: var(--offwhite);
+}
+
 /* ==========================================================================
    Head Styles.
    ========================================================================== */
@@ -585,9 +648,3 @@ article {
 .credit-set {
   margin-bottom: 2rem;
 }
-
-/* ==========================================================================
-  Dark Mode.
-   ========================================================================== */
-
-   @import 'dark-mode';

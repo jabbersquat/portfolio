@@ -52,6 +52,177 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/Inter-Thin.woff2?v=3.19") format("woff2"), url("../fonts/Inter-Thin.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/Inter-ThinItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-ThinItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraLight.woff2?v=3.19") format("woff2"), url("../fonts/Inter-ExtraLight.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraLightItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-ExtraLightItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2?v=3.19") format("woff2"), url("../fonts/Inter-Light.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Inter-LightItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-LightItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2?v=3.19") format("woff2"), url("../fonts/Inter-Regular.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Italic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-Italic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2?v=3.19") format("woff2"), url("../fonts/Inter-Medium.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-MediumItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-MediumItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("../fonts/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2?v=3.19") format("woff2"), url("../fonts/Inter-Bold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-BoldItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-BoldItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("../fonts/Inter-ExtraBold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-ExtraBoldItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/Inter-Black.woff2?v=3.19") format("woff2"), url("../fonts/Inter-Black.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/Inter-BlackItalic.woff2?v=3.19") format("woff2"), url("../fonts/Inter-BlackItalic.woff?v=3.19") format("woff");
+}
+/* -------------------------------------------------------
+Variable font.
+Usage:
+
+  html { font-family: 'Inter', sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+  }
+*/
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("../fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("../fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+/* --------------------------------------------------------------------------
+[EXPERIMENTAL] Multi-axis, single variable font.
+
+Slant axis is not yet widely supported (as of February 2019) and thus this
+multi-axis single variable font is opt-in rather than the default.
+
+When using this, you will probably need to set font-variation-settings
+explicitly, e.g.
+
+  * { font-variation-settings: "slnt" 0deg }
+  .italic { font-variation-settings: "slnt" 10deg }
+
+*/
+@font-face {
+  font-family: "Inter var experimental";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  src: url("../fonts/Inter.var.woff2?v=3.19") format("woff2");
+}
 /* ==========================================================================
    Custom Variables
    ========================================================================== */
@@ -70,24 +241,33 @@ table {
   --text-color: var(--black);
   --link-color: var(--blue);
   --section-divider: var(--black);
-  --font-stack-heading: neue-haas-grotesk-display, sans-serif;
-  --font-stack-text: neue-haas-grotesk-text, sans-serif;
+  --icon-fill: var(--black);
+  --font-stack-variable: "Inter var", sans-serif;
+  --font-stack-nonvariable: "Inter", sans-serif;
   --weight-normal: 400;
   --weight-bold: 700;
 }
 
-html[data-theme=light] {
+body {
   --background-color: var(--yellow);
   --text-color: var(--black);
   --link-color: var(--blue);
   --section-divider: var(--black);
+  --icon-fill: var(--black);
+  --blackOnlyOnLight: var(--black);
+  --whiteOnlyOnLight: var(--offwhite);
+  --yellowOnlyOnDark: var(--black);
 }
 
-html[data-theme=dark] {
+body.dark-theme {
   --background-color: var(--black);
   --text-color: var(--yellow);
-  --link-color: var(--brown);
+  --link-color: var(--offwhite);
   --section-divider: var(--yellow);
+  --icon-fill: var(--yellow);
+  --blackOnlyOnLight: var(--offwhite);
+  --whiteOnlyOnLight: var(--black);
+  --yellowOnlyOnDark: var(--yellow);
 }
 
 /* ==========================================================================
@@ -96,23 +276,25 @@ html[data-theme=dark] {
 html {
   font-size: 100%;
   /*16px*/
+  font-family: var(--font-stack-nonvariable);
 }
 @media screen and (max-width: 675px) {
   html {
     font-size: 87.5%;
-    /*16px*/
   }
 }
 
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: var(--font-stack-variable);
+  }
+}
 body {
   background-color: var(--background-color);
 }
 
 body,
 p {
-  font-family: var(--font-stack-text);
-  font-weight: var(--weight-normal);
-  font-style: normal;
   color: var(--text-color);
   line-height: 1.55;
 }
@@ -146,22 +328,25 @@ body {
   border-width: 0;
 }
 
-.section {
-  padding-bottom: var(--block);
+.sr-temp {
+  height: 0;
+  overflow: hidden;
 }
 
 .section {
-  border-top: 2px solid var(--section-divider);
   padding-top: var(--block);
 }
 .section.site-header {
-  padding-top: calc(var(--block) * 1.25);
   border-top: none;
 }
 @media screen and (max-width: 674px) {
   .section.site-header {
     padding-top: calc(var(--block) * 3);
   }
+}
+
+.intro {
+  margin-bottom: calc(var(--block) * 4);
 }
 
 @media screen and (min-width: 675px) {
@@ -178,20 +363,23 @@ body {
 }
 
 @media screen and (min-width: 675px) {
-  .gridder {
+  .section,
+.gridder {
     display: grid;
     grid-template-columns: calc(var(--block) * 7) 1fr;
     gap: var(--block);
   }
 }
 @media screen and (min-width: 900px) {
-  .gridder {
+  .section,
+.gridder {
     grid-template-columns: calc(var(--block) * 10) 1fr;
     gap: var(--block) calc(var(--block) / 2);
   }
 }
 @media screen and (min-width: 1300px) {
-  .gridder {
+  .section,
+.gridder {
     grid-template-columns: calc(var(--block) * 12) 1fr;
   }
 }
@@ -208,9 +396,15 @@ body {
   .section-video,
 .video-wrapper,
 .section-skills-header-wrapper,
-.skill-sets {
+.skill-sets,
+.video-hdr {
     grid-column: span 2;
   }
+}
+
+.section-work__header,
+.section-work__content-wrapper {
+  grid-column: span 2;
 }
 
 .site-header,
@@ -232,23 +426,42 @@ body {
   }
 }
 
+.site-header {
+  padding-top: var(--block);
+}
+
+.section-hr {
+  border: none;
+  height: 2px;
+  width: 100%;
+  background-color: var(--section-divider);
+  margin: 0;
+  grid-column: span 2;
+}
+
+.section-content,
+.section-intro {
+  overflow: hidden;
+}
+
 /* ==========================================================================
    Typography
    ========================================================================== */
 p {
   margin-bottom: 1rem;
+  letter-spacing: -0.004em;
 }
 
 strong {
-  font-family: var(--font-stack-heading);
   font-weight: var(--weight-bold);
 }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
-  font-family: var(--font-stack-heading);
   font-weight: var(--weight-bold);
   line-height: 1.05;
+  letter-spacing: -0.055em;
+  margin-left: -0.03em;
 }
 
 h1 {
@@ -309,10 +522,12 @@ small, .text_small {
 }
 
 .hello {
-  font-size: 1rem;
+  font-size: 0.2em;
+  letter-spacing: -0.055em;
   display: block;
   margin-left: 0.25rem;
   margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 .section-hdr {
@@ -322,10 +537,6 @@ small, .text_small {
 /* ==========================================================================
    Header
    ========================================================================== */
-.site-header {
-  padding-bottom: calc(var(--block) * 4);
-}
-
 /* ==========================================================================
    Skill Section
    ========================================================================== */
@@ -386,7 +597,7 @@ small, .text_small {
 }
 
 /* SVG colors */
-.svg-skill-extra {
+.skill-colored {
   opacity: 0;
 }
 
@@ -395,16 +606,39 @@ small, .text_small {
   fill: inherit;
 }
 
+.stroke-default {
+  fill: none;
+  stroke-width: 10;
+  stroke: inherit;
+}
+
+.skill-base,
+.additional-base {
+  fill: var(--icon-fill);
+}
+
 .fill-black {
-  fill: var(--text-color);
+  fill: var(--black);
+}
+
+.fill-blackOnLight {
+  fill: var(--blackOnlyOnLight);
 }
 
 .fill-white {
   fill: var(--offwhite);
 }
 
+.fill-whiteOnLight {
+  fill: var(--whiteOnlyOnLight);
+}
+
 .fill-yellow {
   fill: var(--yellow);
+}
+
+.fill-yellowOnDark {
+  fill: var(--yellowOnlyOnDark);
 }
 
 .fill-red {
@@ -415,10 +649,26 @@ small, .text_small {
   fill: var(--purple);
 }
 
+.fill-brown {
+  fill: var(--brown);
+}
+
+.fill-green {
+  fill: var(--green);
+}
+
+.fill-blue {
+  fill: var(--blue);
+}
+
+.stroke-yellowOnDark {
+  stroke: var(--yellowOnlyOnDark);
+}
+
 /* ==========================================================================
    Work Section
    ========================================================================== */
-.work-hdr {
+.work-item-hdr {
   margin-bottom: calc(var(--block) / 2);
 }
 
@@ -434,7 +684,7 @@ small, .text_small {
 }
 
 article {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 .work-video {
@@ -554,6 +804,7 @@ article {
 .footer {
   background-color: var(--black);
   padding: 3rem 0;
+  margin-top: 3rem;
   text-align: center;
 }
 .footer p {
@@ -599,149 +850,39 @@ article {
   left: 0;
 }
 
+.dark-mode-symbol {
+  opacity: 0;
+}
+.dark-theme .dark-mode-symbol {
+  opacity: 1;
+}
+
+.dark-theme .light-mode-symbol {
+  opacity: 0;
+}
+
+.lightdark-mode:hover use {
+  stroke: var(--offwhite);
+}
+
 /* ==========================================================================
    Head Styles.
    ========================================================================== */
 /* ==========================================================================
    Head Styles.
    ========================================================================== */
+.body {
+  opacity: 0;
+}
+
 .title__home {
   overflow: hidden;
-  animation: titleanimate__mobile 6s;
-}
-@media screen and (min-width: 675px) {
-  .title__home {
-    animation: titleanimate__desktop 6s;
-  }
 }
 
-@keyframes titleanimate__mobile {
-  0% {
-    margin-top: calc(var(--block) * 2);
-  }
-  20% {
-    margin-top: calc(var(--block) * 2);
-  }
-  30% {
-    margin-top: calc(var(--block) * 3);
-  }
-  50% {
-    margin-top: calc(var(--block) * 3);
-  }
-  51% {
-    margin-top: 0;
-  }
-  100% {
-    margin-top: 0;
-  }
-}
-@keyframes titleanimate__desktop {
-  0% {
-    margin-left: calc(var(--block) * 3);
-    width: calc(100vw - var(--block) * 5);
-    margin-top: var(--block);
-  }
-  20% {
-    margin-top: var(--block);
-  }
-  30% {
-    margin-top: 0;
-  }
-  50% {
-    margin-left: calc(var(--block) * 3);
-    width: calc(100vw - var(--block) * 5);
-  }
-  51% {
-    margin-left: 0;
-    width: auto;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-.hello__home {
-  animation: helloanimate__mobile 6s;
-}
-@media screen and (min-width: 675px) {
-  .hello__home {
-    animation: helloanimate__desktop 6s;
-  }
-}
-
-@keyframes helloanimate__mobile {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes helloanimate__desktop {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .name__home {
   display: inline-block;
-  animation: nameanimate__mobile 6s;
-}
-@media screen and (min-width: 675px) {
-  .name__home {
-    animation: nameanimate__desktop 6s;
-  }
 }
 
-@keyframes nameanimate__mobile {
-  0% {
-    opacity: 0;
-    margin-top: var(-block);
-  }
-  32% {
-    opacity: 0;
-    margin-top: var(-block);
-  }
-  40% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-@keyframes nameanimate__desktop {
-  0% {
-    opacity: 0;
-    margin-top: var(-block);
-  }
-  22% {
-    opacity: 0;
-    margin-top: var(-block);
-  }
-  30% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0;
-  }
-}
 .eightbithead-wrapper {
   position: absolute;
   width: calc(var(--block) * 3);
@@ -751,8 +892,7 @@ article {
   right: 0;
   z-index: -1;
   overflow: hidden;
-  background-color: #C19888;
-  opacity: 0.25;
+  min-height: 100vh;
 }
 @media screen and (min-width: 675px) {
   .eightbithead-wrapper {
@@ -760,77 +900,17 @@ article {
   }
 }
 
-.eightbithead-wrapper__home {
-  animation: headcropmove__mobile 6s;
+.eightbithead-opacity {
+  opacity: 0.25;
 }
-@media screen and (min-width: 675px) {
-  .eightbithead-wrapper__home {
-    animation: headcropmove__desktop 6s;
-  }
+.dark-theme .eightbithead-opacity {
+  filter: saturate(0);
 }
 
-@keyframes headcropmove__mobile {
-  0% {
-    width: 100%;
-    background-color: transparent;
-    opacity: 1;
-    z-index: 10;
-  }
-  50% {
-    width: 100%;
-    background-color: transparent;
-    opacity: 1;
-  }
-  55% {
-    z-index: 10;
-  }
-  60% {
-    width: calc(var(--block) * 3);
-    background-color: #C19888;
-    opacity: 0.25;
-    z-index: -1;
-  }
-  100% {
-    width: calc(var(--block) * 3);
-    right: 0;
-    background-color: #C19888;
-    opacity: 0.25;
-    z-index: -1;
-  }
-}
-@keyframes headcropmove__desktop {
-  0% {
-    width: 100%;
-    background-color: transparent;
-    opacity: 1;
-    z-index: 10;
-  }
-  50% {
-    width: 100%;
-    background-color: transparent;
-    opacity: 1;
-  }
-  55% {
-    z-index: 10;
-  }
-  60% {
-    width: calc(var(--block) * 10);
-    background-color: #C19888;
-    opacity: 0.25;
-    z-index: -1;
-  }
-  100% {
-    width: calc(var(--block) * 10);
-    right: 0;
-    background-color: #C19888;
-    opacity: 0.25;
-    z-index: -1;
-  }
-}
 .eightbithead {
   display: grid;
-  width: 1400px;
-  grid-template-columns: repeat(70, 1fr);
+  width: 1000px;
+  grid-template-columns: repeat(50, 1fr);
   opacity: 1;
   overflow: hidden;
   transform-origin: 0 0;
@@ -845,223 +925,16 @@ article {
 }
 @media screen and (min-width: 675px) {
   .eightbithead {
-    width: 2800px;
-    grid-template-columns: repeat(70, 1fr);
+    width: 2000px;
+    grid-template-columns: repeat(50, 1fr);
     margin-top: calc(var(--block) * -12);
-    margin-left: calc(var(--block) * -18);
+    margin-left: calc(var(--block) * -5);
   }
   .eightbithead div {
     height: var(--block);
   }
 }
 
-.eightbithead__home {
-  animation: headsize__mobile 6s;
-}
-@media screen and (min-width: 675px) {
-  .eightbithead__home {
-    animation: headsize__desktop 6s;
-  }
-}
-
-@keyframes headsize__mobile {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-    margin-top: calc(var(--block) / 3);
-    margin-left: calc(var(--block) / 3);
-    border-radius: 50%;
-    border: 2px solid var(--black);
-    background-color: var(--offwhite);
-  }
-  20% {
-    opacity: 1;
-    transform: scale(0.1);
-  }
-  40% {
-    transform: scale(0.1);
-    margin-top: calc(var(--block) / 3);
-    margin-left: calc(var(--block) / 3);
-    border: 30px solid var(--black);
-    background-color: var(--offwhite);
-  }
-  50% {
-    transform: scale(1);
-    border-radius: 50%;
-    margin-top: calc(var(--block) * -6);
-    margin-left: calc(var(--block) * -10);
-    border: 0px solid var(--black);
-    background-color: transparent;
-  }
-  60% {
-    border-radius: 0;
-    margin-left: calc(var(--block) * -10);
-  }
-  100% {
-    transform: scale(1);
-    margin-top: calc(var(--block) * -6);
-    margin-left: calc(var(--block) * -10);
-  }
-}
-@keyframes headsize__desktop {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-    margin-top: calc(var(--block) * 1);
-    margin-left: calc(var(--block) * 1);
-    border-radius: 50%;
-    border: 2px solid var(--black);
-    background-color: var(--offwhite);
-  }
-  20% {
-    opacity: 1;
-    transform: scale(0.04);
-  }
-  40% {
-    transform: scale(0.04);
-    margin-top: calc(var(--block) * 1);
-    margin-left: calc(var(--block) * 1);
-    border: 60px solid var(--black);
-    background-color: var(--offwhite);
-  }
-  50% {
-    transform: scale(1);
-    border-radius: 50%;
-    margin-top: calc(var(--block) * -12);
-    margin-left: calc(var(--block) * -18);
-    border: 0px solid var(--black);
-    background-color: transparent;
-  }
-  60% {
-    border-radius: 0;
-    margin-left: calc(var(--block) * -18);
-  }
-  100% {
-    transform: scale(1);
-    margin-top: calc(var(--block) * -12);
-    margin-left: calc(var(--block) * -18);
-  }
-}
-/* .eightbithead div:hover {
-  opacity: 0.5;
-} */
-.intro__home,
-.site-main__home {
-  animation: secondaryelementsfadein__mobile 6s;
-}
-@media screen and (min-width: 675px) {
-  .intro__home,
-.site-main__home {
-    animation: secondaryelementsfadein__desktop 6s;
-  }
-}
-
-@keyframes secondaryelementsfadein__mobile {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  51% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes secondaryelementsfadein__desktop {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  51% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.skill-set,
-.work-item,
-.video-wrapper {
-  animation: tertiaryelementsfadein__mobile 6s;
-}
-@media screen and (min-width: 675px) {
-  .skill-set,
-.work-item,
-.video-wrapper {
-    animation: tertiaryelementsfadein__desktop 6s;
-  }
-}
-
-@keyframes tertiaryelementsfadein__mobile {
-  0% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tertiaryelementsfadein__desktop {
-  0% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.site-sidebar__home {
-  animation: sidebarfadein__mobile 6s;
-}
-@media screen and (min-width: 675px) {
-  .site-sidebar__home {
-    animation: sidebarfadein__desktop 6s;
-  }
-}
-
-@keyframes sidebarfadein__mobile {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes sidebarfadein__desktop {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /* ==========================================================================
   Colophon.
    ========================================================================== */
@@ -1077,9 +950,5 @@ article {
 .credit-set {
   margin-bottom: 2rem;
 }
-
-/* ==========================================================================
-  Dark Mode.
-   ========================================================================== */
 
 /*# sourceMappingURL=main.css.map */
