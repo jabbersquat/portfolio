@@ -430,9 +430,16 @@ article {
   height: auto;
   margin-bottom: var(--block);
   border: 2px solid var(--brown2);
+  box-sizing: border-box;
 
   .work-img--link:hover & {
-    border: 1px solid var(--green);
+    border: 2px solid var(--green);
+  }
+}
+
+.section-work__copy {
+  @media screen and (min-width: 675px) {
+    padding-right: var(--block);
   }
 }
 

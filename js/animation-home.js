@@ -90,6 +90,7 @@ function loadin_animate() {
     .from(splitHeader2.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.1}},'fadein1-=0.15')
     .from(splitHeader3.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.1}},'fadein1-=0.2')
     // .addPause()
+    .to('.section-hdr', {marginBottom: '1rem'},'fadein2+=0.5')
     .to('.section-hr', {marginTop: 40, marginBottom: 40},'fadein2+=0.5')
     .from('.section-intro', {marginBottom: 0, height: 0, transformOrigin: '0 0'},'fadein2+=0.5')
     .from('.section-content', {height: 0, paddingTop: 0, paddingBottom: 0, stagger: {each: 0.1}},'fadein2+=0.5')
