@@ -1,15 +1,16 @@
 /* ==========================================================================
    Head Styles.
    ========================================================================== */
-.body {
-  opacity: 0;
-}
-
 .title__home {
   overflow: hidden;
 }
-.name__home {
+.name__home--first,
+.name__home--last {
   display: inline-block;
+
+  @media screen and (max-width: 525px) {
+    display: block;
+  }
 }
 .eightbithead-wrapper {
   position: absolute;

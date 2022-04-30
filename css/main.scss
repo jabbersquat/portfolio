@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'font';
+@import 'head-animation';
 
 /* ==========================================================================
    Custom Variables
@@ -111,8 +112,6 @@ body {
 
 //Sections general
 .section {
-  // padding-bottom: var(--block);
-  padding-top: var(--block);
   
   &.site-header {
     border-top: none;
@@ -144,12 +143,10 @@ body {
   @media screen and (min-width: 675px) {
     display: grid;
     grid-template-columns: calc(var(--block) * 7) 1fr;
-    gap: var(--block);
   }
 
   @media screen and (min-width: 900px) {
     grid-template-columns: calc(var(--block) * 10) 1fr;
-    gap: var(--block) calc(var(--block) / 2);
   }
   
   @media screen and (min-width: 1300px) {
@@ -184,7 +181,7 @@ body {
 .site-header,
 .site-main {
   padding-left: calc(var(--block) / 2);
-  padding-right: calc(var(--block) / 2);
+  padding-right: calc(var(--block) * 1.5);
 
   @media screen and (min-width: 675px) {
     padding-left: var(--block);
@@ -202,11 +199,13 @@ body {
 
 .section-hr {
   border: none;
-  height: 2px;
+  height: 2px;   
   width: 100%;
   background-color: var(--section-divider);
   margin: 0;
   grid-column: span 2;
+  margin-top: var(--block);
+  margin-bottom: var(--block);
 }
 
 .section-content,
@@ -251,6 +250,11 @@ h1 {
   @media screen and (max-width: 675px) {
     font-size: 4.209rem; // Perfect Fourth
   }
+}
+
+.name__home--first,
+.name__home--last {
+  line-height: 0.9;
 }
 
 h2 {
@@ -476,30 +480,6 @@ article {
   align-items: flex-end;
 }
 
-// .contact-items {
-//   margin-bottom: 0.25rem;
-
-//   li {
-//     display: flex;
-//     align-items: center;
-//     height: var(--block);
-//     margin-bottom: calc(var(--block) / 4);
-//   }
-
-//   @media screen and (min-width: 675px) {
-//     position: relative;
-  
-//     li {
-//       display: inline-block;
-//     }
-  
-//     a {
-//       position: absolute;
-//       top: 0; left: 0;
-//     }
-//   }
-// }
-
 .contact-icons {
   display: flex;
   align-items: center;
@@ -579,27 +559,42 @@ article {
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
+  width: calc(var(--block) * 1.5);
+  height: 100%;
   overflow: visible;
+
+  @media screen and (min-width: 675px) {
+    width: calc(var(--block) * 2);
+  }
 }
 
 .site-sidebar-inner {
-  position: absolute;
+  position: sticky;
   top: var(--block);
-  right: calc(var(--block) * 0.5);
-  width: calc(var(--block) * 1);
+  left: 0;
+  margin-left: calc(var(--block) * 0.35);
+  width: calc(var(--block) * 0.75);
   overflow: visible;
+
+  @media screen and (min-width: 675px) {
+    margin-left: calc(var(--block) * 0.5);
+    width: var(--block);
+  }
 }
 
 .bt-logo-wrapper,
 .lightdark-mode {
-  width: calc(var(--block) * 1);
+  width: calc(var(--block) * 0.75);
   height: 0;
   position: relative;
   padding-top: 75%;
   margin-bottom: calc(var(--block) * 0.5);
   background-color: transparent;
   border: none;
+
+  @media screen and (min-width: 675px) {
+    width: var(--block);
+  }
 
   svg {
     display: block;

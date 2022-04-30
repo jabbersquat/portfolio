@@ -15,14 +15,13 @@
   <meta name="msapplication-TileColor" content="#fac90f">
   <meta name="theme-color" content="#fac90f">
 
+  <style>
+    .body__home { opacity: 0; }
+    .no-js .body__home { opacity: 1; }
+  </style>
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/displayads.css">
-  
-  <script src="js/greensock/gsap.min.js"></script>
-  <script src="js/greensock/DrawSVGPlugin.min.js"></script>
-  <script src="js/greensock/ScrollTrigger.min.js"></script>
-  <script src="js/greensock/SplitText.min.js"></script>
 
   <script>
     window.onbeforeunload = function () {
@@ -33,13 +32,14 @@
   <meta name="theme-color" content="#fac800">
 </head>
 
-<body id="home" class="front-page">
+<body id="home" class="body__home">
   
     <header id="site-header__home" class="site-header">
       <div id="title-wrapper_home" class="title-wrapper">
         <h1 id="title__home" class="title title__home">
           <span id="hello__home" class="hello hello__home">Hi, I'm</span>
-          <span id="name__home" class="name name__home">Brian Travers</span>
+          <span id="name__home--first" class="name name__home--first">Brian</span> 
+          <span id="name__home--last" class="name name__home--last">Travers</span>
         </h1>
       </div>
       <div id="intro__home" class="intro intro__home">
@@ -65,7 +65,7 @@
                 <div class="skill-icons">
                   <svg id="html" class="skill-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 120 120" xml:space="preserve">
                     <title>HTML5 Icon</title>
-                    <use class="skill-base" href="#css-symbol" />
+                    <use class="skill-base" href="#html5-symbol" />
                     <g class="skill-colored">
                       <use class="svg-skill-extra" href="#shield-extra" />
                       <use class="skill-base fill-red" href="#html5-symbol" />
@@ -8064,8 +8064,15 @@
       </symbol>
     </svg>
 
+
+  
+  <script src="js/greensock/gsap.min.js"></script>
+  <script src="js/greensock/DrawSVGPlugin.min.js"></script>
+  <script src="js/greensock/ScrollTrigger.min.js"></script>
+  <script src="js/greensock/SplitText.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/animation.js"></script>
+  <script src="js/animation-home.js"></script>
   <script src="js/displayads.js"></script>
 
 </body>
