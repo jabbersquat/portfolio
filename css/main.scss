@@ -67,11 +67,13 @@ html {
 
 body {
   background-color: var(--background-color);
+  transition: background-color 500ms;
 }
 
 body,
 p {
   color: var(--text-color);
+  transition: color 500ms;
   line-height: 1.55;
 }
 
@@ -496,7 +498,7 @@ article {
   display: flex;
   align-items: center;
   height: var(--block);
-  margin-bottom: calc(var(--block) / 4);
+  margin-bottom: calc(var(--block) * 1.5);
 }
 .additional-link__svg {
   width: var(--block);
@@ -613,19 +615,24 @@ article {
   }
 }
 
-.dark-mode-symbol {
-  opacity: 0;
-
-  .dark-theme & { opacity: 1; }
+#ray-line {
+  stroke-dasharray: 10;
+  stroke-dashoffset: 0;
+  stroke: inherit;
 }
 
-.dark-theme .light-mode-symbol {
-  opacity: 0;
+.lightdark-mode {
+  use {
+    stroke: var(--yellowOnlyOnDark);
+  }
+
+  &:hover {
+    path, use {
+      stroke: var(--offwhite);
+    }
+  }
 }
 
-.lightdark-mode:hover use {
-  stroke: var(--offwhite);
-}
 
 /* ==========================================================================
    Head Styles.

@@ -17,7 +17,15 @@
 
   <style>
     .body__home { opacity: 0; }
-    .no-js .body__home { opacity: 1; }
+    .no-js .body__home { 
+      animation-duration: 2s;
+      animation-delay: 2s;
+      animation-name: no-js-fade-in;
+    }
+    @keyframes no-js-fade-in {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
   </style>
 
   <link rel="stylesheet" href="css/main.css">
@@ -33,6 +41,14 @@
 </head>
 
 <body id="home" class="body__home">
+  <script>
+    // Dark/Light Mode Toggle
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme == "dark") {
+      document.body.classList.add("dark-theme");
+    };
+  </script>
   
     <header id="site-header__home" class="site-header">
       <div id="title-wrapper_home" class="title-wrapper">
@@ -3773,8 +3789,24 @@
         <button id="theme-switcher" class="lightdark-mode">
           <svg class="sidebar-button__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 120 120" xml:space="preserve">
             <title>Dark and Light Mode icons</title>
-            <use class="dark-mode-symbol stroke-yellowOnDark" href="#moon-symbol" />
-            <use class="light-mode-symbol stroke-yellowOnDark" href="#sun-symbol" />
+            <defs>
+              <symbol id="ray">
+                <line id="ray-line" class="ray-line stroke-default stroke-yellowOnDark" x1="60" y1="5" x2="60" y2="15"/>
+              </symbol>
+            </defs>
+            <path id="moon-icon" style="opacity: 0" d="M105,63.95c-2.287,24.747-24.203,42.955-48.95,40.668c-24.747-2.287-42.955-24.203-40.668-48.95
+              C17.376,34.088,34.47,16.994,56.05,15c-11.49,15.544-8.203,37.46,7.341,48.95C75.756,73.089,92.636,73.089,105,63.95z"/>
+            <path id="sun-icon" class="stroke-default stroke-yellowOnDark" d="M85,60c0,13.807-11.193,25-25,25S35,73.807,35,60s11.193-25,25-25S85,46.193,85,60z"/>
+            <g id="rays">
+              <use class="ray-use" href="#ray" />
+              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(45)"/>
+              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(90)"/>
+              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(135)"/>
+              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(180)"/>
+              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(225)"/>
+              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(270)"/>
+              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(315)"/>
+            </g>
           </svg>
         </button>
       </div>
@@ -8047,22 +8079,6 @@
           S37.046,41.139,32.064,41.139z M95.053,95.231H80.463V72.1c0-5.338,0-12.456-7.829-12.456s-8.897,6.05-8.897,12.1v23.488H49.146
           V47.544h14.235v6.406h0.356c2.135-3.559,6.762-7.829,13.879-7.829c14.947,0,17.794,9.964,17.794,22.776v26.335H95.053z"/>
       </symbol>
-      <symbol id="moon-symbol">
-        <path class="stroke-default" d="M105,63.95
-          c-2.287,24.747-24.203,42.955-48.95,40.668c-24.747-2.287-42.955-24.203-40.668-48.95C17.376,34.088,34.47,16.994,56.05,15
-          c-11.49,15.544-8.203,37.46,7.341,48.95C75.756,73.089,92.636,73.089,105,63.95z"/>
-      </symbol>
-      <symbol id="sun-symbol">
-        <circle class="stroke-default" cx="60" cy="60" r="25"/>
-        <line class="stroke-default" x1="60" y1="5" x2="60" y2="15"/>
-        <line class="stroke-default" x1="60" y1="105" x2="60" y2="115"/>
-        <line class="stroke-default" x1="21.1" y1="21.1" x2="28.2" y2="28.2"/>
-        <line class="stroke-default" x1="91.8" y1="91.8" x2="98.9" y2="98.9"/>
-        <line class="stroke-default" x1="5" y1="60" x2="15" y2="60"/>
-        <line class="stroke-default" x1="105" y1="60" x2="115" y2="60"/>
-        <line class="stroke-default" x1="21.1" y1="98.9" x2="28.2" y2="91.8"/>
-        <line class="stroke-default" x1="91.8" y1="28.2" x2="98.9" y2="21.1"/>
-      </symbol>
     </svg>
 
 
@@ -8071,6 +8087,7 @@
   <script src="js/greensock/DrawSVGPlugin.min.js"></script>
   <script src="js/greensock/ScrollTrigger.min.js"></script>
   <script src="js/greensock/SplitText.min.js"></script>
+  <script src="js/greensock/MorphSVGPlugin.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/animation.js"></script>
   <script src="js/animation-home.js"></script>

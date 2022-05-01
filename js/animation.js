@@ -1,5 +1,4 @@
-gsap.registerPlugin(SplitText);
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin, SplitText);
 
 
 //Logo hover animation
@@ -31,21 +30,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Dark/Light Mode Toggle
 const toggleDark = document.getElementById('theme-switcher');
-const currentTheme = localStorage.getItem("theme");
 
+var darkMode_animate = gsap.timeline({defaults: {ease: 'power1.inOut'}, paused: true});
+  darkMode_animate.to('#ray-line', {strokeDashoffset: 10,duration: 0.2})
+  .to('#sun-icon', {morphSVG:'#moon-icon',duration:0.3}, '-=0.1');
 
-if (currentTheme == "dark") {
-  document.body.classList.add("dark-theme");
-};
 
 // Listen for a click on the button 
 toggleDark.addEventListener("click", function() {
   document.body.classList.toggle("dark-theme");
-  
   let theme = "light";
+  darkMode_animate.reverse();
   if (document.body.classList.contains("dark-theme")) {
-
     theme = "dark";
+    darkMode_animate.play();
   }
   localStorage.setItem("theme", theme);
 });
