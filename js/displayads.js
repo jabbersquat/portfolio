@@ -210,16 +210,16 @@ function animate_cefcu() {
       .to(ortho_txt1a, {opacity: 1},'start')
       .to(ortho_txt1b, {opacity: 1},'start+=0.5')
       
-      .to([ortho_txt1a,ortho_txt1b], {opacity: 0},'frame2+=2')
-      .to(ortho_txt2a, {opacity: 1},'frame2+=2')
-      .call(animationNames, null,'frame2+=3')
+      .to([ortho_txt1a,ortho_txt1b], {opacity: 0},'frame2+=1')
+      .to(ortho_txt2a, {opacity: 1},'frame2+=1')
+      .call(animationNames, null,'frame2+=1.5')
       
-      .to(ortho_txt2a, {opacity: 0},'frame3+=2.5')
-      .to(skeleton, {opacity: 0},'frame3+=2.5')
+      .to(ortho_txt2a, {opacity: 0},'frame3+=2')
+      .to(skeleton, {opacity: 0},'frame3+=2')
       .to(ortho_txt3d, {opacity: 1},"txt3+=0")
-      .to(ortho_txt3a, {opacity: 1},"txt3+=0.35")
-      .to(ortho_txt3b, {opacity: 1},"txt3+=0.70")
-      .to(ortho_txt3c, {opacity: 1},"txt3+=1.05")
+      .to(ortho_txt3a, {opacity: 1},"txt3+=0.25")
+      .to(ortho_txt3b, {opacity: 1},"txt3+=0.50")
+      .to(ortho_txt3c, {opacity: 1},"txt3+=0.75")
       .to(ortho_cta, {opacity: 1, scale:1},'final')
       .to('.eightyeightad.ortho-wrapper', {borderColor: "#00a0c8"},'final+=1');
 
@@ -315,15 +315,15 @@ function animate_gcfd() {
     .to(gcfd_txt2, { opacity:1},'start+=1.5')
     .to(gcfd_txt3, { opacity:1},'start+=3')
 
-    .to(gcfd_img, { duration: 3, scale:0.35,left:'25%',top:'12%', ease: "power2.out"},'start+=1')
-    .to(uncropped, { duration: 2, opacity:0},'start+=2')
-    .to(face, { duration: 2, opacity:1},'start+=2.25')
+    .to(gcfd_img, { duration: 1.5, scale:0.35,left:'25%',top:'12%', ease: "power2.out"},'start+=0.5')
+    .to(uncropped, { duration: 1, opacity:0},'start+=1')
+    .to(face, { duration: 1, opacity:1},'start+=1.5')
 
     .to(greenBg, { opacity:1},'final')
     .call(animateLogo, null,'final')
     .to(gcfd_tag, { opacity:1},'final+=1')
-    .to(gcfd_cta, { opacity:1},'final+=2')
-    .to('.eightyeightad.gcfd-wrapper', {borderColor: "#00a0c8"},'final+=2.5');
+    .to(gcfd_cta, { opacity:1},'final+=1.25')
+    .to('.eightyeightad.gcfd-wrapper', {borderColor: "#00a0c8"},'final+=1.5');
 
     return tl_gcfd;
 }
@@ -407,12 +407,12 @@ function animate_ns() {
 
     .to(ns_proof3,{fill: "#ffffff"},'proofs+=0.25')
 
-    .to([ns_proof1,ns_proof2,ns_proof3,ns_line,ns_frame1Wrap],{opacity:0},'final+=0.5')
-    .to(ekgLineLead, {strokeDashoffset: 875, ease: "power1.inOut"},'final+=0.5')
-    .to(ekgLineFull, {strokeDashoffset: 1775, ease: "power1.inOut"},'final+=0.5')
-    .to(ekgLineRed, {opacity: 1, ease: "power1.inOut"},'final+=0.75')
-    .to(ns_txt3a,{opacity:1},'final+=1')
-    .to('.eightyeightad.ns-wrapper', {borderColor: "#00a0c8"},'final+=1.5');
+    .to([ns_proof1,ns_proof2,ns_proof3,ns_line,ns_frame1Wrap],{opacity:0},'final+=0.1')
+    .to(ekgLineLead, {strokeDashoffset: 875, ease: "power1.inOut"},'final+=0.1')
+    .to(ekgLineFull, {strokeDashoffset: 1775, ease: "power1.inOut"},'final+=0.1')
+    .to(ekgLineRed, {opacity: 1, ease: "power1.inOut"},'final+=0.35')
+    .to(ns_txt3a,{opacity:1},'final+=0.6')
+    .to('.eightyeightad.ns-wrapper', {borderColor: "#00a0c8"},'final+=0.8');
 
     return tl_ns;
 }

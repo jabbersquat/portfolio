@@ -38,11 +38,7 @@ var loadinCorrectMargins = (function() {
 
 function loadin_animate() {
 
-  var tl = gsap.timeline(
-    {
-      defaults: {duration: 0.5, ease: 'power1.inOut'},
-      onComplete: clearInlineStyles,
-    });
+  var tl = gsap.timeline({ defaults: {duration: 0.5, ease: 'power1.inOut'}, onComplete: clearInlineStyles, });
 
   var splitNameFirst = new SplitText('.name__home--first', {type:'chars'});
   var splitNameLast = new SplitText('.name__home--last', {type:'chars'});

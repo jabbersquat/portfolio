@@ -571,6 +571,7 @@ article {
   width: calc(var(--block) * 1.5);
   height: 100%;
   overflow: visible;
+  z-index: 101;
 
   @media screen and (min-width: 675px) {
     width: calc(var(--block) * 2);
@@ -581,14 +582,25 @@ article {
   position: sticky;
   top: var(--block);
   left: 0;
-  margin-left: calc(var(--block) * 0.35);
-  width: calc(var(--block) * 0.75);
+  padding-left: calc(var(--block) * 0.35);
+  width: 100%;
   overflow: visible;
 
   @media screen and (min-width: 675px) {
     margin-left: calc(var(--block) * 0.5);
     width: var(--block);
   }
+}
+
+.site-sidebar--backing {
+  width: 0;
+  height: 100%;
+  background-color: var(--brown);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.9;
 }
 
 .bt-logo-wrapper,
@@ -634,12 +646,34 @@ article {
 }
 
 
+
 /* ==========================================================================
    Head Styles.
    ========================================================================== */
 
 @import 'head-animation';
 
+/* ==========================================================================
+  DJ Page
+   ========================================================================== */
+
+.body__dj {
+  background-color: var(--purple);
+}
+
+
+
+/* ==========================================================================
+  Graphic Designer Page
+   ========================================================================== */
+.body__designer {
+  background-color: var(--green);
+}
+
+.work-svg {
+  width: 100%;
+  height: auto;
+}
 
 /* ==========================================================================
   Colophon.
@@ -657,3 +691,4 @@ article {
 .credit-set {
   margin-bottom: 2rem;
 }
+

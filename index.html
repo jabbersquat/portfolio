@@ -64,7 +64,7 @@
       <hr class="section-hr__header section-hr">
     </header>
 
-    <main class="site-main site-main__home">
+    <main id="site-main" class="site-main site-main__home">
       <section id="skills" class="section section-skills">
         <header class="section-header-wrapper section-skills-header-wrapper">
           <h2 id="skills-hdr" class="section-hdr">Skill Set</h2>
@@ -3758,14 +3758,15 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer id="site-footer" class="footer">
       <p><small>&copy; Copyright 2022, Brian Travers</small></p>
       <p><small><a href="colophon.html">Colophon</a></small></p>
     </footer>
 
     <aside class="site-sidebar site-sidebar__home">
-      <div class="site-sidebar-inner">
-        <button class="bt-logo-wrapper">
+      <div id="site-sidebar--backing" class="site-sidebar--backing"></div>
+      <nav class="site-sidebar-inner">
+        <button id="bt-logo-wrapper" class="bt-logo-wrapper">
           <svg version="1.1" id="bt-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 12" xml:space="preserve">
             <rect id="cross4" class="fill-yellowOnDark" x="12" y="5" width="4" height="5"/>
             <rect id="cross3" class="fill-yellowOnDark" x="12" y="2" width="4" height="5"/>
@@ -3787,7 +3788,7 @@
         </button>
 
         <button id="theme-switcher" class="lightdark-mode">
-          <svg class="sidebar-button__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 120 120" xml:space="preserve">
+          <svg class="sidebar-button__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
             <title>Dark and Light Mode icons</title>
             <defs>
               <symbol id="ray">
@@ -3809,7 +3810,16 @@
             </g>
           </svg>
         </button>
-      </div>
+
+        <ul>
+          <li>
+            <a href="is_a_graphicdesigner.html">I'm also a graphic designer</a>
+          </li>
+          <li>
+            <a href="is_a_dj.html">I'm also a DJ</a>
+          </li>
+        </ul>
+      </nav>
     </aside>
 
     <div id="eightbithead-wrapper__home" class="eightbithead-wrapper eightbithead-wrapper__home">
