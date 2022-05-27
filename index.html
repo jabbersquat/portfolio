@@ -16,6 +16,7 @@
   <meta name="theme-color" content="#fac90f">
 
   <style>
+    /* Just to stop the FOUC while GSAP loads */
     .body__home { opacity: 0; }
     .no-js .body__home { 
       animation-duration: 2s;
@@ -40,7 +41,7 @@
   <meta name="theme-color" content="#fac800">
 </head>
 
-<body id="home" class="body__home">
+<body id="home" class="body body__home">
   <script>
     // Dark/Light Mode Toggle
     const currentTheme = localStorage.getItem("theme");
@@ -52,19 +53,19 @@
   
     <header id="site-header__home" class="site-header">
       <div id="title-wrapper_home" class="title-wrapper">
-        <h1 id="title__home" class="title title__home">
-          <span id="hello__home" class="hello hello__home">Hi, I'm</span>
-          <span id="name__home--first" class="name name__home--first">Brian</span> 
-          <span id="name__home--last" class="name name__home--last">Travers</span>
+        <h1 id="title__home" class="title">
+          <span id="hello__home" class="hello">Hi, I'm</span>
+          <span id="name__home--first" class="name name--first">Brian</span> 
+          <span id="name__home--last" class="name name--last">Travers</span>
         </h1>
       </div>
-      <div id="intro__home" class="intro intro__home">
+      <div id="intro__home" class="intro">
         <p class="">and I am a Front-End Developer with a background in design.  I work at a small agency here in Chicago, which is to say I have the privilege of working in a variety of disciplines within development (with a particular affinity for&nbsp;animation).</p>
       </div>
       <hr class="section-hr__header section-hr">
     </header>
 
-    <main id="site-main" class="site-main site-main__home">
+    <main id="site-main" class="site-main">
       <section id="skills" class="section section-skills">
         <header class="section-header-wrapper section-skills-header-wrapper">
           <h2 id="skills-hdr" class="section-hdr">Skill Set</h2>
@@ -3758,73 +3759,90 @@
         </div>
       </section>
     </main>
-    <footer id="site-footer" class="footer">
+    <footer id="site-footer" class="site-footer">
       <p><small>&copy; Copyright 2022, Brian Travers</small></p>
       <p><small><a href="colophon.html">Colophon</a></small></p>
     </footer>
 
-    <aside class="site-sidebar site-sidebar__home">
+    <aside class="site-sidebar">
       <div id="site-sidebar--backing" class="site-sidebar--backing"></div>
       <nav class="site-sidebar-inner">
-        <button id="bt-logo-wrapper" class="bt-logo-wrapper">
-          <svg version="1.1" id="bt-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 12" xml:space="preserve">
-            <rect id="cross4" class="fill-yellowOnDark" x="12" y="5" width="4" height="5"/>
-            <rect id="cross3" class="fill-yellowOnDark" x="12" y="2" width="4" height="5"/>
-            <g id="b">
-              <rect id="cross2" class="fill-yellowOnDark" y="5" width="4" height="5"/>
-              <rect id="cross1" class="fill-yellowOnDark" y="2" width="4" height="5"/>
-              <rect id="b-bar" class="fill-yellowOnDark" width="6" height="12"/>
-              <polygon id="b-loop" class="fill-yellowOnDark" points="10,6 10,5 9,5 9,4 5,4 5,6 8,6 8,9 5,9 5,12 8,12 8,11 9,11 9,10 10,10 10,9 11,9 11,6 "/>
-            </g>
-            <polygon id="b-loop-invert" class="fill-yellowOnDark" points="13,0 7,0 7,3 9,3 9,4 10,4 10,5 11,5 11,6 12,6 12,9 11,9 11,10 10,10 10,11 9,11 9,12 13,12"/>
-            <rect id="t1" class="fill-yellowOnDark" x="9" y="3" width="4" height="1"/>
-            <rect id="t2" class="fill-yellowOnDark" x="10" y="4" width="3" height="1"/>
-            <rect id="t3" class="fill-yellowOnDark" x="11" y="5" width="2" height="1"/>
-            <rect id="t4" class="fill-yellowOnDark" x="12" y="6" width="1" height="3"/>
-            <rect id="t5" class="fill-yellowOnDark" x="11" y="9" width="2" height="1"/>
-            <rect id="t6" class="fill-yellowOnDark" x="10" y="10" width="3" height="1"/>
-            <rect id="t7" class="fill-yellowOnDark" x="9" y="11" width="4" height="1"/>
-          </svg>
-        </button>
+        <div class="site-sidebar__btns">
+          <button id="bt-logo-wrapper" class="site-sidebar__btn bt-logo-wrapper">
+            <svg version="1.1" id="bt-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 12" xml:space="preserve">
+              <rect fill="transparent" width="100%" height="100%"></rect>
+              <g id="icon-whole">
+                <g id="b">
+                  <g id="b-inner">
+                    <rect id="cross2" class="fill-currcolor" y="5" width="4" height="5"/>
+                    <rect id="cross1" class="fill-currcolor" y="2" width="4" height="5"/>
+                  </g>
+                  <rect id="b-bar" class="fill-currcolor" width="6" height="12"/>
+                  <polygon id="b-loop" class="fill-currcolor" points="10,6 10,5 9,5 9,4 5,4 5,6 8,6 8,9 5,9 5,12 8,12 8,11 9,11 9,10 10,10 10,9 11,9 11,6 "/>
+                </g>
+                <g id="t">
+                  <rect id="cross4" class="fill-currcolor" x="12" y="5" width="4" height="5"/>
+                  <rect id="cross3" class="fill-currcolor" x="12" y="2" width="4" height="5"/>
+                  <polygon id="b-loop-invert" class="fill-currcolor" points="13,0 7,0 7,3 9,3 9,4 10,4 10,5 11,5 11,6 12,6 12,9 11,9 11,10 10,10 10,11 9,11 9,12 13,12"/>
+                  <rect id="t1" class="fill-currcolor" x="9" y="3" width="4" height="1"/>
+                  <rect id="t2" class="fill-currcolor" x="10" y="4" width="3" height="1"/>
+                  <rect id="t3" class="fill-currcolor" x="11" y="5" width="2" height="1"/>
+                  <rect id="t4" class="fill-currcolor" x="12" y="6" width="1" height="3"/>
+                  <rect id="t5" class="fill-currcolor" x="11" y="9" width="2" height="1"/>
+                  <rect id="t6" class="fill-currcolor" x="10" y="10" width="3" height="1"/>
+                  <rect id="t7" class="fill-currcolor" x="9" y="11" width="4" height="1"/>
+                </g>
+              </g>
+            </svg>
+          </button>
 
-        <button id="theme-switcher" class="lightdark-mode">
-          <svg class="sidebar-button__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
-            <title>Dark and Light Mode icons</title>
-            <defs>
-              <symbol id="ray">
-                <line id="ray-line" class="ray-line stroke-default stroke-yellowOnDark" x1="60" y1="5" x2="60" y2="15"/>
-              </symbol>
-            </defs>
-            <path id="moon-icon" style="opacity: 0" d="M105,63.95c-2.287,24.747-24.203,42.955-48.95,40.668c-24.747-2.287-42.955-24.203-40.668-48.95
-              C17.376,34.088,34.47,16.994,56.05,15c-11.49,15.544-8.203,37.46,7.341,48.95C75.756,73.089,92.636,73.089,105,63.95z"/>
-            <path id="sun-icon" class="stroke-default stroke-yellowOnDark" d="M85,60c0,13.807-11.193,25-25,25S35,73.807,35,60s11.193-25,25-25S85,46.193,85,60z"/>
-            <g id="rays">
-              <use class="ray-use" href="#ray" />
-              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(45)"/>
-              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(90)"/>
-              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(135)"/>
-              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(180)"/>
-              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(225)"/>
-              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(270)"/>
-              <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(315)"/>
-            </g>
-          </svg>
-        </button>
+          <button id="theme-switcher" class="site-sidebar__btn lightdark-mode">
+            <svg class="sidebar-button__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
+              <title>Dark and Light Mode icons</title>
+              <defs>
+                <symbol id="ray">
+                  <line id="ray-line" class="ray-line stroke-default stroke-currcolor" x1="60" y1="5" x2="60" y2="15"/>
+                </symbol>
+              </defs>
+              <path id="moon-icon" style="opacity: 0" d="M105,63.95c-2.287,24.747-24.203,42.955-48.95,40.668c-24.747-2.287-42.955-24.203-40.668-48.95
+                C17.376,34.088,34.47,16.994,56.05,15c-11.49,15.544-8.203,37.46,7.341,48.95C75.756,73.089,92.636,73.089,105,63.95z"/>
+              <path id="sun-icon" class="stroke-default stroke-currcolor" d="M85,60c0,13.807-11.193,25-25,25S35,73.807,35,60s11.193-25,25-25S85,46.193,85,60z"/>
+              <g id="rays">
+                <use class="ray-use" href="#ray" />
+                <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(45)"/>
+                <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(90)"/>
+                <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(135)"/>
+                <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(180)"/>
+                <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(225)"/>
+                <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(270)"/>
+                <use class="ray-use" href="#ray" transform-origin="50% 50%" transform="rotate(315)"/>
+              </g>
+            </svg>
+          </button>
+        </div>
 
-        <ul>
+        <ul class="site-sidebar__links">
           <li>
-            <a href="is_a_graphicdesigner.html">I'm also a graphic designer</a>
+            <a class="site-sidebar__link site-sidebar__1" href="is_a_graphicdesigner.html">
+              <span>. </span><span>. </span><span>. </span>
+              <span>and I'm also a graphic designer</span>
+              <span class="site-sidebar__link--arrow"> -</span><span class="site-sidebar__link--arrow">-</span><span class="site-sidebar__link--arrow">></span>
+            </a>
           </li>
           <li>
-            <a href="is_a_dj.html">I'm also a DJ</a>
+            <a class="site-sidebar__link  site-sidebar__2" href="is_a_dj.html">
+              <span>. </span><span>. </span><span>. </span>
+              <span>and I'm also a DJ </span>
+              <span class="site-sidebar__link--arrow"> -</span><span class="site-sidebar__link--arrow">-</span><span class="site-sidebar__link--arrow">></span>
+            </a>
           </li>
         </ul>
       </nav>
     </aside>
 
-    <div id="eightbithead-wrapper__home" class="eightbithead-wrapper eightbithead-wrapper__home">
+    <div id="eightbithead-wrapper__home" class="eightbithead-wrapper">
       <div class="eightbithead-opacity">
-        <div id="eightbithead__home" class="eightbithead eightbithead__home">
+        <div id="eightbithead__home" class="eightbithead">
           <div class="bt-trans"></div>
           <div class="bt-trans"></div>
           <div class="bt-trans"></div>
@@ -8098,6 +8116,7 @@
   <script src="js/greensock/ScrollTrigger.min.js"></script>
   <script src="js/greensock/SplitText.min.js"></script>
   <script src="js/greensock/MorphSVGPlugin.min.js"></script>
+  <script src="js/greensock/ScrollToPlugin.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/animation.js"></script>
   <script src="js/animation-home.js"></script>

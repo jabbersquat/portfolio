@@ -14,7 +14,7 @@ var chunkedbits = allbits.reduce((resultArray, item, index) => {
 function clearInlineStyles() {
   let reset = gsap.timeline();
   reset
-  .set('#title-wrapper_home, .eightbithead, #eightbithead-wrapper__home, #intro__home, .section-hdr, .section-hr, .section, .section-content, .section-intro, .site-header, .skill-list li, .work-item, .video-wrapper, .footer, .section-contact, .site-sidebar-inner button, .eightbithead-opacity', { clearProps: "all" })
+  .set('.title-wrapper, .eightbithead, .eightbithead-wrapper, .intro, .section-hdr, .section-hr, .section, .section-content, .section-intro, .site-header, .skill-list li, .work-item, .video-wrapper, .site-footer, .section-contact, .site-sidebar-inner button, .eightbithead-opacity', { clearProps: "all" })
   .add(skillTriggers)
   .add(displayTriggers)
   .add(videoTriggers)
@@ -40,8 +40,8 @@ function loadin_animate() {
 
   var tl = gsap.timeline({ defaults: {duration: 0.5, ease: 'power1.inOut'}, onComplete: clearInlineStyles, });
 
-  var splitNameFirst = new SplitText('.name__home--first', {type:'chars'});
-  var splitNameLast = new SplitText('.name__home--last', {type:'chars'});
+  var splitNameFirst = new SplitText('.name--first', {type:'chars'});
+  var splitNameLast = new SplitText('.name--last', {type:'chars'});
   var splitHeader1 = new SplitText('#skills-hdr', {type:'chars'});
   var splitHeader2 = new SplitText('#work-hdr', {type:'chars'});
   var splitHeader3 = new SplitText('#video-hdr', {type:'chars'});
@@ -67,36 +67,36 @@ function loadin_animate() {
     tl
     .set('.section-hdr', {marginBottom: 0})
     .set('.section-hr', {marginBottom: 0, marginTop: 0})
-    .to('.body__home', {opacity: 1,duration:0.2})
-    .from('.hello__home', {opacity:0},'textintro+=0.6')
-    .from('.hello__home', {y:40},'textintro+=1.15')
-    .from('.name__home--first', {y:40,opacity:0},'textintro+=1.15')
-    .from('.name__home--last', {y:40,opacity:0},'textintro+=1.15')
+    .to('.body', {opacity: 1,duration:0.2})
+    .from('.hello', {opacity:0},'textintro+=0.6')
+    .from('.hello', {y:40},'textintro+=1.15')
+    .from('.name--first', {y:40,opacity:0},'textintro+=1.15')
+    .from('.name--last', {y:40,opacity:0},'textintro+=1.15')
     .add(chunkedTl, 'textintro+=0.15')
-    .from(splitNameFirst.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.05}}, 'textintro2')
-    .from(splitNameLast.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.05}}, 'textintro2+=0.1')
-    .from('#title-wrapper_home', {duration: 0.1, marginTop: loadinCorrectMargins[0], marginLeft: loadinCorrectMargins[1]},'start+=1')
-    .from('.eightbithead', {duration: 1, scale:0.05,marginLeft:40,marginTop:20},'start+=0.5')
-    .from('#eightbithead-wrapper__home', {duration: 2, zIndex: 99, opacity: 1, width: '100%', ease: 'power3.inOut'},'start+=0.5')
-    .from('.eightbithead-opacity', {duration: 0.5, filter: 'saturate(1)', opacity: 1},'start+=1.25')
-    .from('#intro__home', {opacity: 0},'start+=0.5')
-    .from('.section-hdr', {opacity:0, stagger: {each: 0.1}},'fadein1-=0.1')
-    .from('.section-hr', {scaleX: 0, transformOrigin: '0 0', stagger: {each: 0.1}},'fadein1-=0.1')
-    .from(splitHeader1.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.1}},'fadein1-=0.1')
-    .from(splitHeader2.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.1}},'fadein1-=0.15')
-    .from(splitHeader3.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.1}},'fadein1-=0.2')
+    .from(splitNameFirst.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.05}}, 'textintro2-=0.25')
+    .from(splitNameLast.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.05}}, 'textintro2-=0.05')
+    .from('.title-wrapper', {duration: 0.01, marginTop: loadinCorrectMargins[0], marginLeft: loadinCorrectMargins[1]},'start+=0.8')
+    .from('.eightbithead', {duration: 1, scale:0.05,marginLeft:40,marginTop:20},'start+=0.25')
+    .from('.eightbithead-wrapper', {duration: 2, zIndex: 99, opacity: 1, width: '100%', ease: 'power3.inOut'},'start+=0.25')
+    .from('.eightbithead-opacity', {duration: 0.5, filter: 'saturate(1)', opacity: 1},'start+=1.7')
+    .from('.intro', {opacity: 0},'start+=0.7')
+    .from('.section-hdr', {opacity:0, stagger: {each: 0.1}},'fadein1-=1.25')
+    .from('.section-hr', {scaleX: 0, transformOrigin: '0 0', stagger: {each: 0.1}},'fadein1-=1.25')
+    .from(splitHeader1.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.05}},'fadein1-=1.25')
+    .from(splitHeader2.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.05}},'fadein1-=1.3')
+    .from(splitHeader3.chars, {duration: 0.25, fontWeight: 400, stagger: {each: 0.05}},'fadein1-=1.35')
     // .addPause()
-    .to('.section-hdr', {marginBottom: '1rem'},'fadein2+=0.5')
-    .to('.section-hr', {marginTop: 40, marginBottom: 40},'fadein2+=0.5')
-    .from('.section-intro', {marginBottom: 0, height: 0, transformOrigin: '0 0'},'fadein2+=0.5')
-    .from('.section-content', {height: 0, paddingTop: 0, paddingBottom: 0, stagger: {each: 0.1}},'fadein2+=0.5')
-    .from('#intro__home', {marginBottom: 0},'fadein2+=0.5')
-    .from('.site-header', {paddingBottom: 0},'fadein2+=0.5')
+    .to('.section-hdr', {marginBottom: '1rem'},'fadein2-=0.1')
+    .to('.section-hr', {marginTop: 40, marginBottom: 40},'fadein2-=0.1')
+    .from('.section-intro', {marginBottom: 0, height: 0, transformOrigin: '0 0'},'fadein2-=0.1')
+    .from('.section-content', {height: 0, paddingTop: 0, paddingBottom: 0, stagger: {each: 0.1}},'fadein2-=0.1')
+    .from('.intro', {marginBottom: 0},'fadein2-=0.1')
+    .from('.site-header', {paddingBottom: 0},'fadein2-=0.1')
     .from('.skill-list li', {opacity:0, stagger: {each: 0.05}},'fadein3')
     .from('.section-intro', {opacity:0, stagger: {each: 0.1}},'fadein3')
     .from('.work-item', {opacity:0, stagger: {each: 0.1}},'fadein3+=0.25')
     .from('.video-wrapper', {opacity: 0},'fadein3+=0.65')
-    .from('.footer, .section-contact', {opacity: 0},'fadein3+=0.75')
+    .from('.site-footer, .section-contact', {opacity: 0},'fadein3+=0.75')
     .from('.site-sidebar-inner button', {opacity:0, stagger: {each: 0.1}},'fadein3+=0.35')
     ;
 
@@ -116,6 +116,7 @@ function videoTriggers() {
       trigger: video,
       start: 'top center',
       end: 'bottom center',
+      toggleClass: 'work-video-enabled',
       // markers: true,
       onEnter: () => video.play(),
       onEnterBack: () => video.play(),

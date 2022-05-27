@@ -44,7 +44,8 @@ sidebarExpandTl
   .to('#site-main, #site-footer, .section-hr__header', { height: 0, opacity: 0, duration: 0.5 },'start')
   .to('.intro, .eightbithead-opacity', { opacity: 0.1 },'start')
   .to('.site-sidebar__1 span', {opacity: 1, stagger: {each: 0.2}}, 'start')
-  .to('.site-sidebar__2 span', {opacity: 1, stagger: {each: 0.2}}, 'start+=0.1');
+  .to('.site-sidebar__2 span', {opacity: 1, stagger: {each: 0.2}}, 'start+=0.15')
+  .to('.site-sidebar__3 span', {opacity: 1, stagger: {each: 0.2}}, 'start+=0.3');
 
 function btOver() {
   if(sidebarInactive) {

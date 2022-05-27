@@ -1,11 +1,11 @@
 /* ==========================================================================
    Head Styles.
    ========================================================================== */
-.title__home {
+.title {
   overflow: hidden;
 }
-.name__home--first,
-.name__home--last {
+.name--first,
+.name--last {
   display: inline-block;
 
   @media screen and (max-width: 525px) {
